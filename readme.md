@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://hackerresidencygroup.com">
-    <img alt="Agentic" src="https://raw.githubusercontent.com/HackerResidencyGroup/website/main/public/hrg-social-image-dark.png" width="640">
+    <img alt="Hacker Residency Group" src="https://raw.githubusercontent.com/HackerResidencyGroup/website/refs/heads/main/public/hrg-social-image-dark.png" width="640">
   </a>
 </p>
 
