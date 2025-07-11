@@ -11,6 +11,8 @@
 
 # Hacker Residency Group <!-- omit from toc -->
 
+> A month-long, experimental Hacker Residency with the first cohort taking place in Da Nang, Vietnam during November, 2025.
+
 See the [site](https://hackerresidencygroup.com) for details. 💪
 
 ## License

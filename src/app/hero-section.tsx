@@ -188,7 +188,7 @@ export function HeroSection() {
             />
 
             <div className='w-full text-center text-sm italic pt-8 text-muted-foreground'>
-              (this is the actual villa you'll be staying in!)
+              (this is the actual villa you'll be staying in)
             </div>
           </div>
         </div>
