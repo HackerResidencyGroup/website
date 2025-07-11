@@ -2,6 +2,7 @@ import './globals.css'
 import 'react-medium-image-zoom/dist/styles.css'
 
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/next'
 import { Geist } from 'next/font/google'
 import { Toaster } from 'sonner'
 
@@ -59,6 +60,7 @@ export default function RootLayout({
             <Footer />
           </div>
 
+          <Analytics />
           <Bootstrap />
         </Providers>
       </body>
