@@ -16,8 +16,8 @@ export function StorySection2() {
         initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
         whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
         transition={{
-          duration: 0.25,
-          scale: { type: 'tween', visualDuration: 0.25 }
+          duration: 0.15,
+          scale: { type: 'tween', visualDuration: 0.15 }
         }}
       >
         Wait, why the hell are we doing this{' '}
@@ -31,8 +31,8 @@ export function StorySection2() {
         We're doing this as an experiment to shine a spotlight on the indie
         hacker lifestyle while building a new type of international developer
         community. We're not charging for the residency because we want to
-        attract the absolute best developers around the world regardless of your
-        financial situation.
+        attract the absolute best developers from around the world regardless of
+        your background or financial situation.
       </h3>
     </section>
   )

@@ -20,7 +20,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: config.title,
   description: config.description,
-  authors: [{ name: config.author, url: config.twitterUrl }],
+  authors: config.authors,
   metadataBase: new URL(config.prodUrl),
   keywords: config.keywords,
   openGraph: {

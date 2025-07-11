@@ -12,19 +12,32 @@ export const domain =
 
 export const author = 'Travis Fischer'
 export const authorTwitterUsername = 'transitive_bs'
+export const copyright = `© ${new Date().getFullYear()} Hacker Residency Group. All rights reserved.`
+
+// external urls
 export const twitterUrl = `https://x.com/${authorTwitterUsername}`
+export const githubUrl = 'https://github.com/HackerResidencyGroup/website'
+export const moreInfoUrl =
+  'https://transitive-bs.notion.site/Da-Nang-Hacker-Residency-1feedb27f1248050b005d65de79d151c'
+
 export const authors = [
   {
     name: author,
     url: twitterUrl
+  },
+  {
+    name: 'Tony Dinh',
+    url: 'https://x.com/tdinh_me'
+  },
+  {
+    name: 'Minh-Phuc Tran',
+    url: 'https://x.com/phuctm97'
+  },
+  {
+    name: 'David Park',
+    url: 'https://x.com/dayonefoundry'
   }
 ]
-export const copyright = `© ${new Date().getFullYear()} Hacker Residency Group. All rights reserved.`
-
-// external urls
-export const githubUrl = 'https://github.com/HackerResidencyGroup/website'
-export const moreInfoUrl =
-  'https://transitive-bs.notion.site/Da-Nang-Hacker-Residency-1feedb27f1248050b005d65de79d151c'
 
 export const keywords = [
   'hacker residency',
@@ -37,10 +50,12 @@ export const keywords = [
   'vietnam',
   'HF0',
   'HF0 residency',
+  'startup residency',
   'startups',
   'AI engineers',
   'bootstrapping',
-  'startup founders'
+  'startup founders',
+  'digital nomads'
 ]
 
 export const env =
@@ -60,7 +75,3 @@ export const vercelUrl =
 // export const webBaseUrl = isDev || !vercelUrl ? baseUrl : `https://${vercelUrl}`
 export const apiBaseUrl = process.env.NEXT_PUBLIC_AGENTIC_API_BASE_URL!
 export const gatewayBaseUrl = process.env.NEXT_PUBLIC_AGENTIC_GATEWAY_BASE_URL!
-
-export const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY!
-export const posthogHost =
-  process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com'

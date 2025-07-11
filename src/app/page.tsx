@@ -27,17 +27,17 @@ export default function TheBestDamnLandingPageEver() {
       {/* CTA section */}
       <DotsSection className='flex flex-col gap-12 mb-16 items-center'>
         <motion.h2
-          className='text-center text-balance leading-snug md:leading-none text-3xl font-heading'
+          className='text-center text-balance text-3xl font-heading'
           initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
           whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
           transition={{
-            duration: 0.25,
-            scale: { type: 'tween', visualDuration: 0.25 }
+            duration: 0.15,
+            scale: { type: 'tween', visualDuration: 0.15 }
           }}
         >
           Sound cool?
           <br />
-          Come build with us!
+          Apply to come build with us!
         </motion.h2>
 
         <motion.p
@@ -46,25 +46,15 @@ export default function TheBestDamnLandingPageEver() {
           whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
           transition={{
             delay: 0.15,
-            duration: 0.25,
-            scale: { type: 'tween', visualDuration: 0.25 }
+            duration: 0.15,
+            scale: { type: 'tween', visualDuration: 0.15 }
           }}
         >
           November 1st – 30th, 2025
         </motion.p>
 
         <HeroButton className='h-full'>
-          <motion.div
-            initial={{ opacity: 0, scale: 0, translateY: -20 }}
-            whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
-            transition={{
-              delay: 0.25,
-              duration: 0.25,
-              scale: { type: 'tween', visualDuration: 0.25 }
-            }}
-          >
-            Applications Coming Soon
-          </motion.div>
+          <div>Applications Coming Soon</div>
         </HeroButton>
       </DotsSection>
     </>

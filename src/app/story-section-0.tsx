@@ -14,9 +14,9 @@ export function StorySection0() {
         ref={ref}
         className='text-center text-balance text-2xl leading-normal max-w-3xl'
       >
-        Imagine spending a month in a dope villa in SE Asia. <br />
-        Alongside 10 other world-class founders who're all serious about taking
-        their startups to the next level...
+        Imagine spending a month in this dope villa in SE Asia. <br />
+        Surrounded by 10 other world-class founders who're all serious about
+        taking their startups to the next level...
       </h3>
     </section>
   )

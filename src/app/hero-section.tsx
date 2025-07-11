@@ -186,6 +186,10 @@ export function HeroSection() {
                 scale: { type: 'tween', visualDuration: 0.4 }
               }}
             />
+
+            <div className='w-full text-center text-sm italic pt-4'>
+              (this is the actual villa you'll be staying in!)
+            </div>
           </div>
         </div>
       </div>
