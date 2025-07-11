@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Travis from '@/public/people/travis.jpg'
-import Tony from '@/public/people/tony.png'
-import Phuc from '@/public/people/phuc.jpg'
-import David from '@/public/people/david.jpg'
-import { TwitterIcon } from '@/icons/twitter'
 import { GitHubIcon } from '@/icons/github'
 import { LinkedInIcon } from '@/icons/linkedin'
+import { TwitterIcon } from '@/icons/twitter'
+import David from '@/public/people/david.jpg'
+import Phuc from '@/public/people/phuc.jpg'
+import Tony from '@/public/people/tony.png'
+import Travis from '@/public/people/travis.jpg'
 
 const people = [
   {

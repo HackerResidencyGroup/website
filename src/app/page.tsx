@@ -1,11 +1,15 @@
+import Link from 'next/link'
+
+import { DotsSection } from '@/components/dots-section'
+import { HeroButton } from '@/components/hero-button'
+import { Button } from '@/components/ui/button'
+import { moreInfoUrl } from '@/lib/config'
+
 import { HeroSection } from './hero-section'
 import { StorySection0 } from './story-section-0'
 import { StorySection1 } from './story-section-1'
 import { TeamSection } from './team-section'
-import { DotsSection } from '@/components/dots-section'
-import { HeroButton } from '@/components/hero-button'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+
 export default function TheBestDamnLandingPageEver() {
   return (
     <>
@@ -24,12 +28,12 @@ export default function TheBestDamnLandingPageEver() {
         </h2>
 
         <div className='flex justify-center items-center gap-4 sm:gap-8'>
-          <HeroButton asChild className='h-full'>
-            <Link href='/marketplace'>Apply Now</Link>
+          <HeroButton asChild className='h-full' disabled>
+            <Link href='/marketplace'>Applications Coming Soon</Link>
           </HeroButton>
 
           <Button variant='outline' asChild className='h-full py-[9px]'>
-            <Link href='about'>More Info</Link>
+            <Link href={moreInfoUrl}>More Info</Link>
           </Button>
         </div>
       </DotsSection>

@@ -1,15 +1,15 @@
 'use client'
 
-import Image, { type ImageProps } from 'next/image'
-import HeroImage from '@/public/da-nang-villa/hero.jpg'
-import { forwardRef, useCallback, useEffect, useState } from 'react'
-import gsap from 'gsap'
-import raf from 'raf'
+import { gsap } from 'gsap'
+import { Flip } from 'gsap/Flip'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { SplitText } from 'gsap/SplitText'
 import { motion } from 'motion/react'
+import Image, { type ImageProps } from 'next/image'
+import raf from 'raf'
+import { forwardRef, useEffect, useState } from 'react'
 
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import Flip from 'gsap/Flip'
-import SplitText from 'gsap/SplitText'
+import HeroImage from '@/public/da-nang-villa/hero.jpg'
 
 const ExoticImage = forwardRef<HTMLImageElement, ImageProps>(
   function ExoticImageWrapper(props, ref) {
@@ -39,6 +39,7 @@ export function HeroSection() {
       let resizeRaf: ReturnType<typeof raf>
 
       function flipTimeline() {
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         if (tl) {
           tl.kill()
           gsap.set(targetEl, { clearProps: 'all' })
@@ -49,6 +50,7 @@ export function HeroSection() {
           scrollTrigger: {
             trigger: wrapperElements[0],
             start: 'center center',
+            // eslint-disable-next-line unicorn/prefer-at
             endTrigger: wrapperElements[wrapperElements.length - 1],
             end: 'center center',
             scrub: 0.25
@@ -56,7 +58,7 @@ export function HeroSection() {
         })
 
         // Loop through each wrapper element.
-        wrapperElements.forEach((element, index: number) => {
+        for (const [index, element] of wrapperElements.entries()) {
           const nextIndex = index + 1
 
           if (nextIndex < wrapperElements.length) {
@@ -80,7 +82,7 @@ export function HeroSection() {
               }) as any
             )
           }
-        })
+        }
       }
 
       window.addEventListener('resize', () => {

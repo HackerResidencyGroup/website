@@ -1,10 +1,9 @@
 'use client'
 
-import { useEffect, useRef, type RefObject } from 'react'
-import gsap from 'gsap'
-
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import SplitText from 'gsap/SplitText'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { SplitText } from 'gsap/SplitText'
+import { type RefObject, useEffect } from 'react'
 
 export function useAnimatedStoryText(
   ref: RefObject<HTMLHeadingElement | null>,

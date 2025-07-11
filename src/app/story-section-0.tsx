@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
+
 import { useAnimatedStoryText } from './animated-story-text'
 
 export function StorySection0() {

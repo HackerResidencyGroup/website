@@ -23,6 +23,8 @@ export const copyright = `© ${new Date().getFullYear()} Hacker Residency Group.
 
 // external urls
 export const githubUrl = 'https://github.com/HackerResidencyGroup/website'
+export const moreInfoUrl =
+  'https://transitive-bs.notion.site/Da-Nang-Hacker-Residency-1feedb27f1248050b005d65de79d151c'
 
 export const keywords = [
   'hacker residency',
