@@ -17,7 +17,7 @@ export function StorySection1() {
         And the best part is it's 100% FREE.
         <br />
         You only need to pay for your flights. We cover the luxury villa, food,
-        laundry, and a personal assistant for the month.
+        laundry, and your very own personal assistant for the month.
       </h3>
     </section>
   )

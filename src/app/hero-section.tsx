@@ -133,7 +133,6 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0, translateY: -20 }}
             animate={{ opacity: 1, scale: 1, translateY: 0 }}
             transition={{
-              delay: 0.4,
               duration: 0.4,
               scale: { type: 'tween', visualDuration: 0.4 }
             }}

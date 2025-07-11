@@ -15,8 +15,8 @@ export function StorySection0() {
         className='text-center text-balance text-2xl leading-normal max-w-3xl'
       >
         Imagine spending a month in a dope villa in SE Asia. <br />
-        Surrounded by 10 world-class hackers who're serious about taking their
-        startups to the next level...
+        Alongside 10 other world-class founders who're all serious about taking
+        their startups to the next level...
       </h3>
     </section>
   )
