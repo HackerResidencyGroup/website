@@ -1,5 +1,8 @@
+import Link from 'next/link'
+
 import { ActiveLink } from '@/components/active-link'
 import { DarkModeToggle } from '@/components/dark-mode-toggle'
+import { moreInfoUrl } from '@/lib/config'
 import { cn } from '@/lib/utils'
 
 import styles from './styles.module.css'
@@ -22,9 +25,14 @@ export function Header() {
         </ActiveLink>
 
         <div className='flex justify-end items-center h-full gap-4'>
-          <ActiveLink href='/about' className='link whitespace-nowrap'>
-            About
-          </ActiveLink>
+          <Link
+            href={moreInfoUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='link whitespace-nowrap'
+          >
+            More Info
+          </Link>
 
           <DarkModeToggle />
         </div>

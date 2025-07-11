@@ -14,7 +14,7 @@ export function StorySection1() {
         ref={ref}
         className='text-center text-balance text-2xl leading-normal max-w-3xl'
       >
-        And the best part is it's 100% free.
+        And the best part is it's 100% FREE.
         <br />
         You only need to pay for your flights. We cover the luxury villa, food,
         laundry, and a personal assistant for the month.

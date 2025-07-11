@@ -1,17 +1,18 @@
 'use client'
 
-import * as THREE from 'three'
-import { useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import {
-  Image,
-  Environment,
-  ScrollControls,
-  useScroll,
-  type ImageProps
-} from '@react-three/drei'
-import { easing } from 'maath'
 import './utils'
+
+import {
+  Environment,
+  Image,
+  type ImageProps,
+  ScrollControls,
+  useScroll
+} from '@react-three/drei'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { easing } from 'maath'
+import { useRef, useState } from 'react'
+import * as THREE from 'three'
 
 export function ImageCarousel() {
   return (
@@ -70,7 +71,10 @@ function Carousel({ radius = 1.4, count = 8 }) {
 function Card({ url, ...props }: ImageProps & { url: string }) {
   const ref = useRef<any>(null)
   const [hovered, hover] = useState(false)
-  const pointerOver = (e: any) => (e.stopPropagation(), hover(true))
+  const pointerOver = (e: any) => {
+    e.stopPropagation()
+    hover(true)
+  }
   const pointerOut = () => hover(false)
 
   useFrame((_state, delta) => {
@@ -97,6 +101,7 @@ function Card({ url, ...props }: ImageProps & { url: string }) {
       onPointerOut={pointerOut}
       {...props}
     >
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       {/* @ts-ignore */}
       <bentPlaneGeometry args={[0.1, 1, 1, 20, 20]} />
     </Image>
