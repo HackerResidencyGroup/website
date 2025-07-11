@@ -22,9 +22,7 @@ export const authors = [
 export const copyright = `© ${new Date().getFullYear()} Hacker Residency Group. All rights reserved.`
 
 // external urls
-export const githubUrl =
-  'https://github.com/transitive-bullshit/hacker-residency-group'
-export const emailUrl = 'mailto:travis@agentic.so'
+export const githubUrl = 'https://github.com/HackerResidencyGroup/website'
 
 export const keywords = [
   'hacker residency',
