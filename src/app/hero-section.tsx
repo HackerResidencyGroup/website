@@ -112,7 +112,7 @@ export function HeroSection() {
       <div className='relative overflow-hidden w-full max-w-7xl'>
         <div className='relative min-h-[100vh] flex flex-col items-center justify-center'>
           <motion.h1
-            className='text-center text-balance text-4xl md:text-6xl font-semibold max-w-3xl leading-normal mb-4'
+            className='text-center text-balance text-4xl md:text-6xl font-semibold max-w-3xl leading-normal mb-4 p-4 bg-transparent'
             initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
             animate={{ opacity: 1, scale: 1, translateY: 0 }}
             transition={{

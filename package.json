@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/transitive-bullshit/hacker-residency-group.git"
+    "url": "git+https://github.com/HackerResidencyGroup/website.git"
   },
   "packageManager": "pnpm@10.13.1",
   "engines": {

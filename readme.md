@@ -1,11 +1,17 @@
+<p align="center">
+  <a href="https://hackerresidencygroup.com">
+    <img alt="Agentic" src="https://raw.githubusercontent.com/HackerResidencyGroup/website/main/public/hrg-social-image-dark.png" width="640">
+  </a>
+</p>
+
 <p>
-  <a href="https://github.com/transitive-bullshit/hacker-residency-group/actions/workflows/main.yml"><img alt="Build Status" src="https://github.com/transitive-bullshit/hacker-residency-group/actions/workflows/main.yml/badge.svg" /></a>
+  <a href="https://github.com/HackerResidencyGroup/website/actions/workflows/main.yml"><img alt="Build Status" src="https://github.com/HackerResidencyGroup/website/actions/workflows/main.yml/badge.svg" /></a>
   <a href="https://prettier.io"><img alt="Prettier Code Formatting" src="https://img.shields.io/badge/code_style-prettier-brightgreen.svg" /></a>
 </p>
 
 # Hacker Residency Group <!-- omit from toc -->
 
-**TODO**
+See the [site](https://hackerresidencygroup.com) for details. 💪
 
 ## License
 
