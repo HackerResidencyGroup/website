@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'motion/react'
+import Link from 'next/link'
 
 import { DotsSection } from '@/components/dots-section'
 import { HeroButton } from '@/components/hero-button'
@@ -25,9 +26,9 @@ export default function TheBestDamnLandingPageEver() {
       <StorySection2 />
 
       {/* CTA section */}
-      <DotsSection className='flex flex-col gap-12 mb-16 items-center'>
+      <DotsSection className='flex flex-col gap-12 pb-16 items-center'>
         <motion.h2
-          className='text-center text-balance text-3xl font-heading'
+          className='text-center text-balance text-3xl font-heading leading-relaxed'
           initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
           whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
           transition={{
@@ -35,7 +36,7 @@ export default function TheBestDamnLandingPageEver() {
             scale: { type: 'tween', visualDuration: 0.15 }
           }}
         >
-          Sound cool?
+          Sounds cool?
           <br />
           Apply to come build with us!
         </motion.h2>
@@ -53,8 +54,8 @@ export default function TheBestDamnLandingPageEver() {
           November 1st – 30th, 2025
         </motion.p>
 
-        <HeroButton className='h-full'>
-          <div>Applications Coming Soon</div>
+        <HeroButton>
+          <Link href='/apply'>Apply Now</Link>
         </HeroButton>
       </DotsSection>
     </>

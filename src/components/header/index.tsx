@@ -35,6 +35,10 @@ export function Header() {
         </Tooltip>
 
         <div className='flex justify-end items-center h-full gap-4'>
+          <ActiveLink href='/apply' className='link'>
+            Apply
+          </ActiveLink>
+
           <ActiveLink href='/about' className='link'>
             About
           </ActiveLink>

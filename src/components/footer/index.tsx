@@ -13,6 +13,10 @@ export function Footer() {
             Home
           </ActiveLink>
 
+          <ActiveLink href='/apply' className='link'>
+            Apply
+          </ActiveLink>
+
           <ActiveLink href='/about' className='link'>
             About
           </ActiveLink>
