@@ -1,5 +1,7 @@
 import './globals.css'
-import 'react-medium-image-zoom/dist/styles.css'
+// core styles shared by all of react-notion-x (required)
+import 'react-notion-x/src/styles.css'
+import './notion.css'
 
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'

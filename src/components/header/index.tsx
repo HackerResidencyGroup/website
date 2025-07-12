@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import { ActiveLink } from '@/components/active-link'
 import { DarkModeToggle } from '@/components/dark-mode-toggle'
 import {
@@ -7,7 +5,6 @@ import {
   TooltipContent,
   TooltipTrigger
 } from '@/components/ui/tooltip'
-import { moreInfoUrl } from '@/lib/config'
 import { cn } from '@/lib/utils'
 
 import styles from './styles.module.css'
@@ -38,14 +35,9 @@ export function Header() {
         </Tooltip>
 
         <div className='flex justify-end items-center h-full gap-4'>
-          <Link
-            href={moreInfoUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='link whitespace-nowrap'
-          >
-            More Info
-          </Link>
+          <ActiveLink href='/about' className='link'>
+            About
+          </ActiveLink>
 
           <DarkModeToggle />
         </div>

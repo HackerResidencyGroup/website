@@ -51,8 +51,6 @@ export const keywords = [
   'HF0',
   'HF0 residency',
   'startup residency',
-  'startups',
-  'AI engineers',
   'bootstrapping',
   'startup founders',
   'digital nomads'

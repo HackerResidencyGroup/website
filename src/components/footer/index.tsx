@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { ActiveLink } from '@/components/active-link'
 import { GitHubIcon } from '@/icons/github'
-import { githubUrl, moreInfoUrl } from '@/lib/config'
+import { githubUrl } from '@/lib/config'
 
 export function Footer() {
   return (
@@ -13,14 +13,9 @@ export function Footer() {
             Home
           </ActiveLink>
 
-          <Link
-            href={moreInfoUrl}
-            className='link'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            More Info
-          </Link>
+          <ActiveLink href='/about' className='link'>
+            About
+          </ActiveLink>
 
           <Link
             href={githubUrl}
