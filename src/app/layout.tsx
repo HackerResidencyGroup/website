@@ -1,6 +1,6 @@
 import './globals.css'
-// core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css'
+// Notion style overrides should come after the react-notion-x styles
 import './notion.css'
 
 import type { Metadata } from 'next'
