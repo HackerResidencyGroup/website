@@ -25,6 +25,8 @@ export function HeroSection() {
   const wrapperRef = useRef<HTMLDivElement | null>(null)
   const wrapperRef2 = useRef<HTMLDivElement | null>(null)
   const targetRef = useRef<HTMLDivElement | null>(null)
+  const tlRef = useRef<gsap.core.Timeline | null>(null)
+  const resizeRafRef = useRef<number | null>(null)
 
   useEffect(() => {
     if (isTransitioning) {
@@ -39,18 +41,14 @@ export function HeroSection() {
       const wrapperElements = [wrapperRef.current, wrapperRef2.current]
       const targetEl = targetRef.current
 
-      let tl: gsap.core.Timeline
-      let resizeRaf: ReturnType<typeof raf>
-
       function flipTimeline() {
-        // eslint-disable-next-line @typescript-eslint/no-misused-promises
-        if (tl) {
-          tl.kill()
+        if (tlRef.current) {
+          tlRef.current.kill()
           gsap.set(targetEl, { clearProps: 'all' })
         }
 
         // Use the first and last wrapper elements for the scroll trigger.
-        tl = gsap.timeline({
+        tlRef.current = gsap.timeline({
           scrollTrigger: {
             trigger: wrapperElements[0],
             start: 'center center',
@@ -79,7 +77,7 @@ export function HeroSection() {
             const offset = nextDistance - thisDistance
 
             // Add the Flip.fit tween to the timeline.
-            tl.add(
+            tlRef.current.add(
               Flip.fit(targetEl, nextWrapperEl, {
                 duration: offset,
                 ease: 'none'
@@ -90,8 +88,11 @@ export function HeroSection() {
       }
 
       window.addEventListener('resize', () => {
-        raf.cancel(resizeRaf)
-        resizeRaf = raf(flipTimeline)
+        if (resizeRafRef.current) {
+          raf.cancel(resizeRafRef.current)
+        }
+
+        resizeRafRef.current = raf(flipTimeline)
       })
 
       flipTimeline()
@@ -144,7 +145,15 @@ export function HeroSection() {
             November 2025
           </motion.p>
 
-          <motion.div className='block md:hidden'>
+          <motion.div
+            className='block md:hidden'
+            initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
+            animate={{ opacity: 1, scale: 1, translateY: 0 }}
+            transition={{
+              duration: 0.4,
+              scale: { type: 'tween', visualDuration: 0.4 }
+            }}
+          >
             <MotionImage
               src={HeroImage}
               alt='Da Nang Villa'
