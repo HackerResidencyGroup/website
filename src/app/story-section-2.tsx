@@ -13,7 +13,7 @@ export function StorySection2() {
     <section className='relative flex flex-col gap-16 mb-16'>
       <motion.h2
         className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'
-        initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
+        initial={{ opacity: 0.5, scale: 0, translateY: -15 }}
         whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
         transition={{
           duration: 0.15,
@@ -29,10 +29,10 @@ export function StorySection2() {
         className='text-center text-pretty text-2xl leading-normal max-w-3xl'
       >
         We're doing this as an experiment to shine a spotlight on the indie
-        hacker lifestyle while building a new type of international developer
-        community. We're not charging for the residency because we want to
-        attract the absolute best developers from around the world regardless of
-        your background or financial situation.
+        hacker lifestyle while also building a new type of international
+        developer community. We're not charging for the residency because we
+        want to attract the absolute best developers from around the world
+        regardless of your background or financial situation.
       </h3>
     </section>
   )
