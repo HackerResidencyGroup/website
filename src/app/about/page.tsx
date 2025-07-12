@@ -14,7 +14,7 @@ export default async function AboutPage() {
 
   return (
     <>
-      <div className='flex flex-col gap-8'>
+      <div className='flex flex-col gap-8 max-w-full'>
         <h2 className='text-center text-balance font-semibold text-3xl font-heading'>
           About
         </h2>

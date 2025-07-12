@@ -40,6 +40,7 @@ export function NotionBlock({
       previewImages={!!recordMap.preview_images}
       showCollectionViewDropdown={false}
       showTableOfContents={false}
+      className='max-w-full'
     />
   )
 }
