@@ -25,6 +25,7 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.3",

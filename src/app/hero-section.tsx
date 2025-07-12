@@ -3,13 +3,14 @@
 import { gsap } from 'gsap'
 import { Flip } from 'gsap/Flip'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { SplitText } from 'gsap/SplitText'
 import { motion } from 'motion/react'
 import Image, { type ImageProps } from 'next/image'
 import raf from 'raf'
 import { forwardRef, useEffect, useRef, useState } from 'react'
 
 import HeroImage from '@/public/da-nang-villa/hero.jpg'
+
+gsap.registerPlugin(ScrollTrigger, Flip)
 
 const ExoticImage = forwardRef<HTMLImageElement, ImageProps>(
   function ExoticImageWrapper(props, ref) {
@@ -26,8 +27,6 @@ export function HeroSection() {
   const targetRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, Flip, SplitText)
-
     if (isTransitioning) {
       return
     }

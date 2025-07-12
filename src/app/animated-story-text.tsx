@@ -1,9 +1,13 @@
 'use client'
 
+import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
-import { type RefObject, useEffect } from 'react'
+import { useInView } from 'motion/react'
+import { type RefObject, useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger, SplitText)
 
 export function useAnimatedStoryText(
   ref: RefObject<HTMLHeadingElement | null>,
@@ -19,13 +23,16 @@ export function useAnimatedStoryText(
     staggerValue?: number
   } = {}
 ) {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, SplitText)
+  const animationRef = useRef<any | null>(null)
+  const isInView = useInView(ref)
 
-    function initSplitOnScroll() {
+  useGSAP(
+    () => {
       if (!ref.current) return
+      animationRef.current?.revert()
 
-      new SplitText(ref.current, {
+      // Ensure fonts are loaded before splitting
+      const split = new SplitText(ref.current, {
         type: 'words, chars',
         autoSplit: true,
         onSplit(self) {
@@ -50,8 +57,20 @@ export function useAnimatedStoryText(
           return ctx
         }
       })
-    }
 
-    initSplitOnScroll()
-  }, [ref, scrollStart, scrollEnd, fadedValue, staggerValue])
+      animationRef.current = split
+      return () => split.revert()
+    },
+    {
+      scope: ref,
+      dependencies: [
+        ref,
+        scrollStart,
+        scrollEnd,
+        fadedValue,
+        staggerValue,
+        isInView
+      ]
+    }
+  )
 }
