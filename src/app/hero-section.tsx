@@ -7,7 +7,7 @@ import { SplitText } from 'gsap/SplitText'
 import { motion } from 'motion/react'
 import Image, { type ImageProps } from 'next/image'
 import raf from 'raf'
-import { forwardRef, useEffect, useState } from 'react'
+import { forwardRef, useEffect, useRef, useState } from 'react'
 
 import HeroImage from '@/public/da-nang-villa/hero.jpg'
 
@@ -21,6 +21,9 @@ const MotionImage = motion(ExoticImage)
 
 export function HeroSection() {
   const [isTransitioning, setIsTransitioning] = useState(true)
+  const wrapperRef = useRef<HTMLDivElement | null>(null)
+  const wrapperRef2 = useRef<HTMLDivElement | null>(null)
+  const targetRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, Flip, SplitText)
@@ -30,10 +33,12 @@ export function HeroSection() {
     }
 
     function initFlipOnScroll() {
-      const wrapperElements = document.querySelectorAll(
-        "[data-flip-element='wrapper']"
-      )
-      const targetEl = document.querySelector("[data-flip-element='target']")
+      if (!wrapperRef.current || !wrapperRef2.current || !targetRef.current) {
+        return
+      }
+
+      const wrapperElements = [wrapperRef.current, wrapperRef2.current]
+      const targetEl = targetRef.current
 
       let tl: gsap.core.Timeline
       let resizeRaf: ReturnType<typeof raf>
@@ -95,7 +100,7 @@ export function HeroSection() {
 
     // Initialize Scaling Elements on Scroll (GSAP Flip)
     initFlipOnScroll()
-  }, [isTransitioning])
+  }, [isTransitioning, wrapperRef, wrapperRef2, targetRef])
 
   useEffect(() => {
     if (!isTransitioning) {
@@ -140,11 +145,24 @@ export function HeroSection() {
             November 2025
           </motion.p>
 
-          <div className='relative w-[20em] h-[20em]'>
+          <motion.div className='block md:hidden'>
+            <MotionImage
+              src={HeroImage}
+              alt='Da Nang Villa'
+              className='w-full h-auto origin-top rounded-sm shadow-md'
+              placeholder='blur'
+              priority={true}
+              width={HeroImage.width}
+              height={HeroImage.height}
+              blurDataURL={HeroImage.blurDataURL}
+            />
+          </motion.div>
+
+          <div className='hidden md:block relative w-[20em] h-[20em]'>
             <div className='aspect-[1280/853]' />
 
             <motion.div
-              data-flip-element='wrapper'
+              ref={wrapperRef}
               className='absolute top-0 left-0 w-full h-full'
               initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
               animate={{ opacity: 1, scale: 1, translateY: 0 }}
@@ -154,13 +172,13 @@ export function HeroSection() {
               }}
             >
               <div
-                data-flip-element='target'
-                className='absolute top-0 left-0 w-full h-full isolate will-change-transform transform-[translateX(0)_rotate(0.001deg)] flex flex-col items-center justify-center'
+                ref={targetRef}
+                className='absolute top-0 left-0 w-full h-full isolate will-change-transform transform-[translateY(0)] flex flex-col items-center justify-center'
               >
                 <MotionImage
                   src={HeroImage}
                   alt='Da Nang Villa'
-                  className='w-full h-auto origin-top rounded-sm shadow-md object-cover'
+                  className='w-full h-auto origin-top rounded-sm shadow-md'
                   placeholder='blur'
                   priority={true}
                   width={HeroImage.width}
@@ -172,12 +190,12 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className='relative flex flex-col items-center justify-center'>
+        <div className='hidden md:flex relative flex-col items-center justify-center'>
           <div className='relative w-full'>
             <div className='aspect-[1280/853]' />
 
             <motion.div
-              data-flip-element='wrapper'
+              ref={wrapperRef2}
               className='absolute top-0 left-0 w-full h-full'
               initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
               animate={{ opacity: 1, scale: 1, translateY: 0 }}
