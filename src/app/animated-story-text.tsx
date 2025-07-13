@@ -53,13 +53,12 @@ export function useAnimatedStoryText(
             })
           })
 
-          animationRef.current = split
-
           // return our animations so GSAP can clean them up when onSplit fires
           return ctx
         }
       })
 
+      animationRef.current = split
       return () => split.revert()
     },
     {
