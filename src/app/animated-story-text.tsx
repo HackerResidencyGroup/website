@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
-import { useInView } from 'motion/react'
+// import { useInView } from 'motion/react'
 import { type RefObject, useRef } from 'react'
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
@@ -24,7 +24,7 @@ export function useAnimatedStoryText(
   } = {}
 ) {
   const animationRef = useRef<any | null>(null)
-  const isInView = useInView(ref)
+  // const isInView = useInView(ref)
 
   useGSAP(
     () => {
@@ -53,12 +53,13 @@ export function useAnimatedStoryText(
             })
           })
 
+          animationRef.current = split
+
           // return our animations so GSAP can clean them up when onSplit fires
           return ctx
         }
       })
 
-      animationRef.current = split
       return () => split.revert()
     },
     {
@@ -68,8 +69,8 @@ export function useAnimatedStoryText(
         scrollStart,
         scrollEnd,
         fadedValue,
-        staggerValue,
-        isInView
+        staggerValue
+        // isInView
       ]
     }
   )
