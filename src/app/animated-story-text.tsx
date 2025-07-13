@@ -27,6 +27,9 @@ export function useAnimatedStoryText(
   const ctxRef = useRef<any | null>(null)
   const isInView = useInView(ref)
 
+  // There was a weird bug on mobile where the scroll trigger offsets would
+  // sometimes be off, which is why we're refreshing the animation whenever
+  // the target ref comes into or out of the viewport.
   useGSAP(
     () => {
       if (!ref.current) return
@@ -52,15 +55,12 @@ export function useAnimatedStoryText(
         })
 
         ctxRef.current = ctx
-
-        // return our animations so GSAP can clean them up when onSplit fires
         return ctx
       }
 
       if (splitRef.current) {
         refreshAnimation(splitRef.current)
       } else {
-        // Ensure fonts are loaded before splitting
         splitRef.current = new SplitText(ref.current, {
           type: 'words, chars',
           autoSplit: true,
