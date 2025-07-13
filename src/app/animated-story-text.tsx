@@ -32,7 +32,6 @@ export function useAnimatedStoryText(
       if (!ref.current) return
 
       function refreshAnimation(splitText: SplitText) {
-        console.log('refreshAnimation', splitText, ctxRef.current)
         ctxRef.current?.revert()
 
         const ctx = gsap.context(() => {
@@ -66,7 +65,6 @@ export function useAnimatedStoryText(
           type: 'words, chars',
           autoSplit: true,
           onSplit(self) {
-            console.log('onSplit', self)
             refreshAnimation(self)
           }
         })
