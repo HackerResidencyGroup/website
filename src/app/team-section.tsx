@@ -40,7 +40,7 @@ const people = [
     linkedin: 'https://www.linkedin.com/in/tdinh-me/',
     description: (
       <>
-        Making over $90K MRR while building{' '}
+        Making over $1M ARR solo while building{' '}
         <Link href='https://typingmind.com' target='_blank' className='link'>
           typingmind.com
         </Link>{' '}
