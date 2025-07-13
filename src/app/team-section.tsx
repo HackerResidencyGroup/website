@@ -90,6 +90,8 @@ const people = [
     image: David,
     url: 'https://x.com/dayonefoundry',
     twitter: 'https://x.com/dayonefoundry',
+    github: 'https://github.com/davidvypark',
+    linkedin: 'https://www.linkedin.com/in/david-park-69587844/',
     description: (
       <>
         Built Raya & Kippo and then 120 other apps you&apos;ve never heard of
