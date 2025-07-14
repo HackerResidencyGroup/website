@@ -55,7 +55,8 @@ export default function TheBestDamnLandingPageEver() {
             scale: { type: 'tween', visualDuration: 0.15 }
           }}
         >
-          November 1st – 30th, 2025
+          November 1<span className='text-sm align-super'>st</span> – 30
+          <span className='text-sm align-super'>th</span>, 2025
         </motion.p>
 
         <HeroButton>
