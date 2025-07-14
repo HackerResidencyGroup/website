@@ -6,12 +6,12 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { PhotoView } from 'react-photo-view'
 
-import { DotsSection } from '@/components/dots-section'
 import { HeroButton } from '@/components/hero-button'
+import { ParticleAnimation } from '@/components/particle-animation'
+import Villa0 from '@/public/da-nang-villa/0.jpg'
 import Villa1 from '@/public/da-nang-villa/1.jpg'
 import Villa2 from '@/public/da-nang-villa/4.jpg'
 import Villa3 from '@/public/da-nang-villa/8.jpg'
-import Villa0 from '@/public/da-nang-villa/hero.jpg'
 
 import { useAnimatedStoryText } from './animated-story-text'
 import { HeroSection } from './hero-section'
@@ -21,6 +21,11 @@ import { TeamSection } from './team-section'
 export default function TheBestDamnLandingPageEver() {
   return (
     <>
+      <ParticleAnimation
+        className='fixed top-0 left-0 bottom-0 right-0 opacity-50'
+        particleSpeed={0.5}
+      />
+
       <HeroSection />
 
       <StorySectionIntro />
@@ -36,7 +41,7 @@ export default function TheBestDamnLandingPageEver() {
       <LocationSection />
 
       {/* CTA section */}
-      <DotsSection className='flex flex-col gap-12 pb-16 items-center'>
+      <section className='flex flex-col gap-8 pb-16 items-center'>
         <motion.h2
           className='text-center text-balance text-3xl font-heading leading-relaxed'
           initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
@@ -64,10 +69,10 @@ export default function TheBestDamnLandingPageEver() {
           November 1st – 30th, 2025
         </motion.p>
 
-        <HeroButton>
+        <HeroButton heroVariant='orange'>
           <Link href='/apply'>Apply Now</Link>
         </HeroButton>
-      </DotsSection>
+      </section>
     </>
   )
 }
@@ -88,11 +93,6 @@ function StorySectionIntro() {
         </p>
 
         <p>
-          If you're an experienced developer and are looking to take your
-          startup game to the next level in style, this program's for you.
-        </p>
-
-        <p>
           November 1<span className='text-sm align-super'>st</span> – 30
           <span className='text-sm align-super'>th</span>, 2025.
         </p>
@@ -108,7 +108,7 @@ function StorySectionWhat() {
   return (
     <section className='relative flex flex-col gap-12 mb-16'>
       <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
-        Come hack with us in an amazing villa
+        The villa
       </h2>
 
       <h3
@@ -215,7 +215,7 @@ function StorySectionWhy() {
 
       <h3
         ref={ref}
-        className='text-center text-pretty text-2xl leading-normal max-w-3xl flex flex-col gap-6'
+        className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-6'
       >
         <p>We're doing this as an experiment with a few goals in mind:</p>
 

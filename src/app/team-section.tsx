@@ -113,7 +113,7 @@ export function TeamSection() {
   return (
     <section className='relative flex flex-col gap-16 mb-16' id='team'>
       <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
-        Led By World-Class Hackers
+        Led by world-class hackers
       </h2>
 
       <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4'>
@@ -136,7 +136,7 @@ export function TeamSection() {
                     height={person.image.height}
                     blurDataURL={person.image.blurDataURL}
                     placeholder='blur'
-                    className='rounded-full w-24 h-24 border-2 border-muted-foreground hover:border-foreground shadow-sm grayscale-100 group-hover:grayscale-0'
+                    className='rounded-full w-24 h-24 border-2 border-muted-foreground hover:border-foreground shadow-sm'
                   />
                 </Link>
 
