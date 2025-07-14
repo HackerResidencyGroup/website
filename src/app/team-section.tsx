@@ -120,7 +120,7 @@ export function TeamSection() {
         {people.map((person) => (
           <div
             key={person.name}
-            className='justify-self-center w-full grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-w-xs'
+            className='group justify-self-center w-full grid grid-cols-1 rounded-[2rem] shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-w-xs'
           >
             <div className='grid grid-cols-1 rounded-[2rem] p-2 shadow-md shadow-black/5'>
               <div className='rounded-3xl bg-card p-6 shadow-2xl ring-1 ring-black/5 flex flex-col gap-4 color-card-foreground items-center'>
@@ -136,7 +136,7 @@ export function TeamSection() {
                     height={person.image.height}
                     blurDataURL={person.image.blurDataURL}
                     placeholder='blur'
-                    className='rounded-full w-24 h-24 border-2 border-muted-foreground hover:border-foreground shadow-sm transition-colors'
+                    className='rounded-full w-24 h-24 border-2 border-muted-foreground hover:border-foreground shadow-sm grayscale-100 group-hover:grayscale-0'
                   />
                 </Link>
 

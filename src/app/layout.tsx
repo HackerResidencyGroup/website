@@ -2,6 +2,7 @@ import './globals.css'
 import 'react-notion-x/src/styles.css'
 // Notion style overrides should come after the react-notion-x styles
 import './notion.css'
+import 'react-photo-view/dist/react-photo-view.css'
 
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'

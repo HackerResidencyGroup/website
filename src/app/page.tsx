@@ -1,11 +1,17 @@
 'use client'
 
 import { motion } from 'motion/react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRef } from 'react'
+import { PhotoView } from 'react-photo-view'
 
 import { DotsSection } from '@/components/dots-section'
 import { HeroButton } from '@/components/hero-button'
+import Villa1 from '@/public/da-nang-villa/1.jpg'
+import Villa2 from '@/public/da-nang-villa/4.jpg'
+import Villa3 from '@/public/da-nang-villa/8.jpg'
+import Villa0 from '@/public/da-nang-villa/hero.jpg'
 
 import { useAnimatedStoryText } from './animated-story-text'
 import { HeroSection } from './hero-section'
@@ -102,7 +108,7 @@ function StorySectionWhat() {
   return (
     <section className='relative flex flex-col gap-12 mb-16'>
       <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
-        A new type of residency
+        Come hack with us in an amazing villa
       </h2>
 
       <h3
@@ -110,30 +116,62 @@ function StorySectionWhat() {
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
         <p>
-          We're creating a new type of experimental hacker residency – inspired
-          by{' '}
-          <Link
-            href='https://x.com/HF0'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='link'
-          >
-            HF0
-          </Link>{' '}
-          – and our first batch will be this November in Vietnam.
+          A stunning 10-bedroom villa with pool, workspace, and ocean views.
+          Located 5 minutes from the beach and 15 minutes from the city center.
         </p>
 
-        <p>
-          We'll provide mentorship, weekly demos to push the pace, and a mini
-          demo day at the end of the month.
-        </p>
-
-        <p>
-          We'll also take care of all the daily stuff like
-          food/laundry/cleaning, so you can focus exclusively on building cool
-          shit.
-        </p>
+        <p>Fully equipped for focused work.</p>
       </h3>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl'>
+        <PhotoView src={Villa0.src}>
+          <Image
+            src={Villa0.src}
+            alt='Da Nang Villa'
+            placeholder='blur'
+            width={Villa0.width}
+            height={Villa0.height}
+            blurDataURL={Villa0.blurDataURL}
+            className='rounded-sm shadow-sm cursor-pointer'
+          />
+        </PhotoView>
+
+        <PhotoView src={Villa1.src}>
+          <Image
+            src={Villa1.src}
+            alt='Da Nang Villa'
+            placeholder='blur'
+            width={Villa1.width}
+            height={Villa1.height}
+            blurDataURL={Villa1.blurDataURL}
+            className='rounded-sm shadow-sm cursor-pointer'
+          />
+        </PhotoView>
+
+        <PhotoView src={Villa2.src}>
+          <Image
+            src={Villa2.src}
+            alt='Da Nang Villa'
+            placeholder='blur'
+            width={Villa2.width}
+            height={Villa2.height}
+            blurDataURL={Villa2.blurDataURL}
+            className='rounded-sm shadow-sm cursor-pointer'
+          />
+        </PhotoView>
+
+        <PhotoView src={Villa3.src}>
+          <Image
+            src={Villa3.src}
+            alt='Da Nang Villa'
+            placeholder='blur'
+            width={Villa3.width}
+            height={Villa3.height}
+            blurDataURL={Villa3.blurDataURL}
+            className='rounded-sm shadow-sm cursor-pointer'
+          />
+        </PhotoView>
+      </div>
     </section>
   )
 }
