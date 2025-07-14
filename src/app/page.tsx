@@ -17,13 +17,15 @@ export default function TheBestDamnLandingPageEver() {
     <>
       <HeroSection />
 
-      <StorySection0 />
+      <StorySectionIntro />
 
       <TeamSection />
 
-      <StorySection1 />
+      <StorySectionWhat />
 
-      <StorySection2 />
+      <StorySectionPricing />
+
+      <StorySectionWhy />
 
       <LocationSection />
 
@@ -64,7 +66,7 @@ export default function TheBestDamnLandingPageEver() {
   )
 }
 
-function StorySection0() {
+function StorySectionIntro() {
   const ref = useRef<HTMLHeadingElement | null>(null)
   useAnimatedStoryText(ref)
 
@@ -80,6 +82,12 @@ function StorySection0() {
         </p>
 
         <p>
+          If you're an experienced developer / founder / hacker and are looking
+          to take your startup game to the next level in style, this program's
+          for you.
+        </p>
+
+        <p>
           November 1<span className='text-sm align-super'>st</span> – 30
           <span className='text-sm align-super'>th</span>, 2025.
         </p>
@@ -88,7 +96,49 @@ function StorySection0() {
   )
 }
 
-function StorySection1() {
+function StorySectionWhat() {
+  const ref = useRef<HTMLHeadingElement | null>(null)
+  useAnimatedStoryText(ref)
+
+  return (
+    <section className='relative flex flex-col gap-12 mb-16'>
+      <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
+        A new type of residency
+      </h2>
+
+      <h3
+        ref={ref}
+        className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
+      >
+        <p>
+          This is a new type of experimental hacker residency – inspired by{' '}
+          <Link
+            href='https://x.com/HF0'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='link'
+          >
+            HF0
+          </Link>{' '}
+          – and our first batch will be this November in Vietnam.
+        </p>
+
+        <p>
+          We'll provide mentorship, weekly demos to push the pace, and a mini
+          demo day at the end of the month.
+        </p>
+
+        <p>
+          We'll also take care of all the daily stuff like
+          food/laundry/cleaning, so you can focus exclusively on building cool
+          shit.
+        </p>
+      </h3>
+    </section>
+  )
+}
+
+function StorySectionPricing() {
   const ref = useRef<HTMLHeadingElement | null>(null)
   useAnimatedStoryText(ref)
 
@@ -102,7 +152,7 @@ function StorySection1() {
         ref={ref}
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
-        <p> We don't take any equity or revenue share. </p>
+        <p>We don't take any equity or revenue share.</p>
 
         <p>You only need to pay for your flights.</p>
 
@@ -115,7 +165,7 @@ function StorySection1() {
   )
 }
 
-function StorySection2() {
+function StorySectionWhy() {
   const ref = useRef<HTMLHeadingElement | null>(null)
   useAnimatedStoryText(ref)
 
@@ -127,7 +177,7 @@ function StorySection2() {
 
       <h3
         ref={ref}
-        className='text-center text-pretty text-2xl leading-normal max-w-3xl flex flex-col gap-8'
+        className='text-center text-pretty text-2xl leading-normal max-w-3xl flex flex-col gap-6'
       >
         <p>We're doing this as an experiment with a few goals in mind:</p>
 

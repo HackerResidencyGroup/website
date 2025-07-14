@@ -44,10 +44,6 @@ export function Header() {
             Apply
           </ActiveLink>
 
-          <ActiveLink href='/about' className='link'>
-            About
-          </ActiveLink>
-
           <ActiveLink href='/faq' className='link'>
             FAQ
           </ActiveLink>
