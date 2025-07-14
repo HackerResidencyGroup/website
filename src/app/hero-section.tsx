@@ -113,9 +113,9 @@ export function HeroSection() {
   }, [isTransitioning])
 
   return (
-    <section className='relative flex flex-col gap-10 mb-16'>
+    <section className='relative flex flex-col gap-10 mb-0 md:mb-16'>
       <div className='relative overflow-hidden w-full max-w-7xl'>
-        <div className='relative min-h-[100vh] flex flex-col items-center justify-center'>
+        <div className='relative min-h-[70vh] md:min-h-[100vh] flex flex-col items-center justify-center'>
           <motion.h1
             className='text-center text-balance text-4xl md:text-6xl font-semibold max-w-3xl leading-normal mb-4 p-4 bg-transparent'
             initial={{ opacity: 0.5, scale: 0, translateY: -30 }}

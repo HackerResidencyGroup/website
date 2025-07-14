@@ -113,7 +113,7 @@ export function TeamSection() {
   return (
     <section className='relative flex flex-col gap-16 mb-16' id='team'>
       <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
-        Led By Successful Indie Hackers
+        Led By World-Class Hackers
       </h2>
 
       <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4'>
