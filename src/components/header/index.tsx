@@ -1,10 +1,15 @@
+import Link from 'next/link'
+
 import { ActiveLink } from '@/components/active-link'
 import { DarkModeToggle } from '@/components/dark-mode-toggle'
+import { Button } from '@/components/ui/button'
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger
 } from '@/components/ui/tooltip'
+import { GitHubIcon } from '@/icons/github'
+import { githubUrl } from '@/lib/config'
 import { cn } from '@/lib/utils'
 
 import styles from './styles.module.css'
@@ -34,7 +39,7 @@ export function Header() {
           </TooltipContent>
         </Tooltip>
 
-        <div className='flex justify-end items-center h-full gap-4'>
+        <div className='flex flex-row justify-end items-center h-full gap-4'>
           <ActiveLink href='/apply' className='link'>
             Apply
           </ActiveLink>
@@ -47,7 +52,15 @@ export function Header() {
             FAQ
           </ActiveLink>
 
-          <DarkModeToggle />
+          <div className='flex flex-row justify-end items-center h-full gap-2'>
+            <DarkModeToggle />
+
+            <Button variant='outline' size='icon' asChild>
+              <Link href={githubUrl} target='_blank' rel='noopener noreferrer'>
+                <GitHubIcon className='w-4 h-4' />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </header>

@@ -2,14 +2,14 @@
 
 import { motion } from 'motion/react'
 import Link from 'next/link'
+import { useRef } from 'react'
 
 import { DotsSection } from '@/components/dots-section'
 import { HeroButton } from '@/components/hero-button'
 
+import { useAnimatedStoryText } from './animated-story-text'
 import { HeroSection } from './hero-section'
-import { StorySection0 } from './story-section-0'
-import { StorySection1 } from './story-section-1'
-import { StorySection2 } from './story-section-2'
+import { LocationSection } from './location-section'
 import { TeamSection } from './team-section'
 
 export default function TheBestDamnLandingPageEver() {
@@ -24,6 +24,8 @@ export default function TheBestDamnLandingPageEver() {
       <StorySection1 />
 
       <StorySection2 />
+
+      <LocationSection />
 
       {/* CTA section */}
       <DotsSection className='flex flex-col gap-12 pb-16 items-center'>
@@ -59,5 +61,87 @@ export default function TheBestDamnLandingPageEver() {
         </HeroButton>
       </DotsSection>
     </>
+  )
+}
+
+function StorySection0() {
+  const ref = useRef<HTMLHeadingElement | null>(null)
+  useAnimatedStoryText(ref)
+
+  return (
+    <section className='relative flex flex-col gap-10 mb-16'>
+      <h3
+        ref={ref}
+        className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
+      >
+        <p>
+          We're inviting 10 ambitious founders to come live and build with us
+          for an entire month at a dope villa in SE Asia.
+        </p>
+
+        <p>
+          November 1<span className='text-sm align-super'>st</span> – 30
+          <span className='text-sm align-super'>th</span>, 2025.
+        </p>
+      </h3>
+    </section>
+  )
+}
+
+function StorySection1() {
+  const ref = useRef<HTMLHeadingElement | null>(null)
+  useAnimatedStoryText(ref)
+
+  return (
+    <section className='relative flex flex-col gap-12 mb-16'>
+      <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
+        And the best part is it's 100% free
+      </h2>
+
+      <h3
+        ref={ref}
+        className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
+      >
+        <p> We don't take any equity or revenue share. </p>
+
+        <p>You only need to pay for your flights.</p>
+
+        <p>
+          We cover the villa, food, laundry, a professional videographer, and
+          even your very own personal assistant for the month.
+        </p>
+      </h3>
+    </section>
+  )
+}
+
+function StorySection2() {
+  const ref = useRef<HTMLHeadingElement | null>(null)
+  useAnimatedStoryText(ref)
+
+  return (
+    <section className='relative flex flex-col gap-12 mb-16'>
+      <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
+        Wait, why are we doing this <span className='italic'>for free</span>?
+      </h2>
+
+      <h3
+        ref={ref}
+        className='text-center text-pretty text-2xl leading-normal max-w-3xl flex flex-col gap-8'
+      >
+        <p>We're doing this as an experiment with a few goals in mind:</p>
+
+        <div className='flex flex-col gap-4'>
+          <p>1. Shine an spotlight on the indie hacker lifestyle 🔥</p>
+
+          <p>
+            2. Build a new type of international dev community focused on more
+            ambitious digital nomads
+          </p>
+
+          <p>3. Make friends, vibe, and learn from each other! 🤙</p>
+        </div>
+      </h3>
+    </section>
   )
 }
