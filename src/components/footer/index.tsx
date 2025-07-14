@@ -21,6 +21,10 @@ export function Footer() {
             About
           </ActiveLink>
 
+          <ActiveLink href='/faq' className='link'>
+            FAQ
+          </ActiveLink>
+
           <Link
             href={githubUrl}
             className='link whitespace-nowrap flex flex-row gap-2 items-center'

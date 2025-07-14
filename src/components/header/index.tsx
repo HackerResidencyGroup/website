@@ -43,6 +43,10 @@ export function Header() {
             About
           </ActiveLink>
 
+          <ActiveLink href='/faq' className='link'>
+            FAQ
+          </ActiveLink>
+
           <DarkModeToggle />
         </div>
       </div>
