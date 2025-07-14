@@ -34,8 +34,8 @@ export function LocationSection() {
         >
           David
         </Link>{' '}
-        both happen to live there. 😉 But it's also legit one of the best cities
-        in the world for digital nomads.
+        both happen to live there. 😉 But it's also legitimately one of the best
+        cities in the world for digital nomads.
       </h3>
 
       <Globe />

@@ -82,9 +82,8 @@ function StorySectionIntro() {
         </p>
 
         <p>
-          If you're an experienced developer / founder / hacker and are looking
-          to take your startup game to the next level in style, this program's
-          for you.
+          If you're an experienced developer and are looking to take your
+          startup game to the next level in style, this program's for you.
         </p>
 
         <p>
@@ -111,7 +110,8 @@ function StorySectionWhat() {
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
         <p>
-          This is a new type of experimental hacker residency – inspired by{' '}
+          We're creating a new type of experimental hacker residency – inspired
+          by{' '}
           <Link
             href='https://x.com/HF0'
             target='_blank'
