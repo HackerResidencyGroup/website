@@ -8,31 +8,21 @@ declare global {
 
 export default function ApplyPage() {
   return (
-    <div className='min-h-screen px-4 py-16'>
-      <div className='max-w-4xl mx-auto space-y-8'>
-        <div className='text-center space-y-4'>
-          <h1 className='text-4xl md:text-5xl tracking-tight'>
-            Apply to the Hacker Residency
-          </h1>
-
-          <p className='text-lg opacity-60 max-w-2xl mx-auto'>
-            Join us for a month of building in Da Nang, Vietnam:{' '}
-            <span className='inline-block'>November 1-30, 2025</span>
-          </p>
-        </div>
+    <div className='w-full min-h-screen py-16'>
+      <div className='flex flex-col items-center gap-8'>
+        <h1 className='text-center text-4xl md:text-5xl tracking-tight'>
+          Application Form
+        </h1>
 
         {/* Tally Form Embed */}
-        <div className='w-full'>
-          <div className='overflow-hidden'>
-            <iframe
-              data-tally-src='https://tally.so/embed/nGEE0L?alignLeft=1&hideTitle=1&dynamicHeight=1'
-              loading='lazy'
-              width='100%'
-              height='600'
-              className='w-full min-h-[600px]'
-              title='Apply to Hacker Residency'
-            />
-          </div>
+        <div className='w-full flex flex-col items-center max-w-3xl'>
+          <iframe
+            data-tally-src='https://tally.so/embed/nGEE0L?alignLeft=1&hideTitle=1&dynamicHeight=1'
+            width='100%'
+            height='2622'
+            className='w-full dark:rounded-xl dark:shadow-lg p-8 dark:bg-white overflow-hidden'
+            title='Apply to the Da Nang Hacker Residency'
+          />
 
           <Script
             src='https://tally.so/widgets/embed.js'
