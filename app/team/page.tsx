@@ -131,7 +131,7 @@ export default function PeoplePage() {
                   height={person.image.height}
                   placeholder='blur'
                   blurDataURL={person.image.blurDataURL}
-                  className='object-cover shadow-sm cursor-pointer rounded-full grayscale-100 group-hover:grayscale-0'
+                  className='object-cover shadow-sm cursor-pointer grayscale-100 group-hover:grayscale-0'
                   priority
                 />
               </div>

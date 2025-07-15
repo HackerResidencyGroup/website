@@ -7,7 +7,7 @@ export default function Home() {
       <div className='max-w-2xl mx-auto text-center flex flex-col items-center gap-8'>
         <h1 className='text-center text-balance text-4xl md:text-5xl font-semibold max-w-3xl leading-normal bg-transparent'>
           <span>An Experimental</span> <br />
-          <span className='bg-foreground text-background px-2 md:px-4 py-2 rounded-md'>
+          <span className='bg-foreground text-background px-2 md:px-4 py-2'>
             Hacker Residency
           </span>{' '}
           <br />
