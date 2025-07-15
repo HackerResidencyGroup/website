@@ -15,20 +15,20 @@ import Villa4 from '@/public/images/villa/villa-4.jpg'
 
 const villaImages = [
   {
-    image: Villa1,
-    alt: 'Villa living room with ocean view'
-  },
-  {
-    image: Villa2,
-    alt: 'Aerial view of villa and beachfront'
-  },
-  {
     image: Villa3,
     alt: 'Villa exterior with pool'
   },
   {
     image: Villa4,
     alt: 'Villa workspace and dining area'
+  },
+  {
+    image: Villa1,
+    alt: 'Villa living room with ocean view'
+  },
+  {
+    image: Villa2,
+    alt: 'Aerial view of villa and beachfront'
   }
 ]
 
