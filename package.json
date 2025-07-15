@@ -20,7 +20,7 @@
     "test": "run-s test:*",
     "test:lint": "eslint --cache .",
     "test:format": "prettier --check \"**/*.{js,ts,tsx}\"",
-    "pretest": "run-s build",
+    "posttest": "run-s build",
     "preinstall": "npx only-allow pnpm",
     "prepare": "simple-git-hooks"
   },

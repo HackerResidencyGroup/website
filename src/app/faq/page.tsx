@@ -10,14 +10,12 @@ export default async function FAQPage() {
   const recordMap = await notion.getPage(pageId)
 
   return (
-    <>
-      <div className='flex flex-col gap-8 max-w-full'>
-        <h2 className='text-center text-balance font-semibold text-3xl font-heading'>
-          FAQ
-        </h2>
+    <div className='flex flex-col gap-8 max-w-full'>
+      <h2 className='text-center text-balance font-semibold text-3xl font-heading'>
+        FAQ
+      </h2>
 
-        <NotionBlock recordMap={recordMap} rootPageId={pageId} />
-      </div>
-    </>
+      <NotionBlock recordMap={recordMap} rootPageId={pageId} />
+    </div>
   )
 }
