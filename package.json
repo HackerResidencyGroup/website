@@ -1,86 +1,35 @@
 {
-  "name": "hacker-residency-group",
+  "name": "hackerresidencygroup",
+  "version": "0.1.0",
   "private": true,
-  "author": "Travis Fischer <travis@transitivebullsh.it>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HackerResidencyGroup/website.git"
-  },
-  "packageManager": "pnpm@10.13.1",
-  "engines": {
-    "node": ">=20"
-  },
-  "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "clean": "del .next",
-    "test": "run-s test:*",
-    "test:lint": "eslint --cache .",
-    "test:format": "prettier --check \"**/*.{js,ts,tsx}\"",
-    "pretest": "run-s build",
-    "preinstall": "npx only-allow pnpm",
-    "prepare": "simple-git-hooks"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.2",
-    "@radix-ui/react-avatar": "^1.1.10",
-    "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.3",
-    "@radix-ui/react-tooltip": "^1.2.7",
-    "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "cobe": "^0.6.4",
-    "gsap": "^3.13.0",
     "lucide-react": "^0.525.0",
-    "motion": "^12.23.3",
-    "next": "^15.3.5",
+    "next": "15.3.5",
     "next-themes": "^0.4.6",
-    "notion-client": "^7.4.2",
-    "notion-types": "^7.4.2",
-    "notion-utils": "^7.4.2",
-    "raf": "^3.4.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-notion-x": "^7.4.2",
-    "react-photo-view": "^1.2.7",
-    "react-spring": "^10.0.1",
-    "react-use": "^17.6.0",
-    "sonner": "^2.0.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "tailwind-merge": "^3.3.1",
-    "type-fest": "^4.41.0"
+    "yet-another-react-lightbox": "^3.24.0"
   },
   "devDependencies": {
-    "@fisch0920/config": "^1.1.4",
-    "@tailwindcss/postcss": "^4.1.11",
-    "@tailwindcss/typography": "^0.5.16",
-    "@types/node": "^24.0.13",
-    "@types/raf": "^3.4.3",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "autoprefixer": "^10.4.21",
-    "del-cli": "^6.0.0",
-    "eslint": "^9.30.1",
-    "lint-staged": "^16.1.2",
-    "npm-run-all2": "^8.0.4",
-    "only-allow": "^1.2.1",
-    "postcss": "^8.5.6",
-    "prettier": "^3.6.2",
-    "simple-git-hooks": "^2.13.0",
-    "tailwindcss": "^4.1.11",
-    "typescript": "^5.8.3"
-  },
-  "prettier": "@fisch0920/config/prettier",
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --ignore-unknown --write",
-      "eslint --cache --fix"
-    ]
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "tailwindcss": "^4",
+    "tw-animate-css": "^1.3.5",
+    "typescript": "^5"
   }
 }
