@@ -16,7 +16,7 @@
     "test": "run-s test:*",
     "test:lint": "eslint --cache .",
     "test:format": "prettier --check \"**/*.{js,ts,tsx}\"",
-    "pretest": "run-s build"
+    "posttest": "run-s build"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

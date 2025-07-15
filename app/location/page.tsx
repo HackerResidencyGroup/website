@@ -79,7 +79,7 @@ export default function LocationPage() {
                   width={image.image.width}
                   height={image.image.height}
                   placeholder='blur'
-                  blurDataURL={image.image.src}
+                  blurDataURL={image.image.blurDataURL}
                   sizes='(max-width: 768px) 50vw, 25vw'
                   className='rounded-sm shadow-sm cursor-pointer'
                   priority

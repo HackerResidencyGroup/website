@@ -1,3 +1,3 @@
-import { NotionAPI } from "notion-client";
+import { NotionAPI } from 'notion-client'
 
-export const notion = new NotionAPI();
+export const notion = new NotionAPI()

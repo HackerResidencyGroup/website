@@ -125,10 +125,12 @@ export default function PeoplePage() {
             <div key={index} className='group flex gap-8 items-start'>
               <div className='w-24 h-24 flex-shrink-0 overflow-hidden'>
                 <Image
-                  src={person.image}
+                  src={person.image.src}
                   alt={person.name}
-                  width={96}
-                  height={96}
+                  width={person.image.width}
+                  height={person.image.height}
+                  placeholder='blur'
+                  blurDataURL={person.image.blurDataURL}
                   className='object-cover shadow-sm cursor-pointer rounded-full grayscale-100 group-hover:grayscale-0'
                   priority
                 />
