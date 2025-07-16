@@ -4,24 +4,15 @@ import { gsap } from 'gsap'
 import { Flip } from 'gsap/Flip'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'motion/react'
-import Image, { type ImageProps } from 'next/image'
+import Image from 'next/image'
 import raf from 'raf'
-import { forwardRef, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 import HeroImage from '@/public/da-nang-villa/hero.jpg'
 
 gsap.registerPlugin(ScrollTrigger, Flip)
 
-const ExoticImage = forwardRef<HTMLImageElement, ImageProps>(
-  function ExoticImageWrapper(props, ref) {
-    return <Image {...props} ref={ref} />
-  }
-)
-
-const MotionImage = motion(ExoticImage)
-
 export function HeroSection() {
-  const [isTransitioning, setIsTransitioning] = useState(true)
   const wrapperRef = useRef<HTMLDivElement | null>(null)
   const wrapperRef2 = useRef<HTMLDivElement | null>(null)
   const targetRef = useRef<HTMLDivElement | null>(null)
@@ -29,10 +20,6 @@ export function HeroSection() {
   const resizeRafRef = useRef<number | null>(null)
 
   useEffect(() => {
-    if (isTransitioning) {
-      return
-    }
-
     function initFlipOnScroll() {
       if (!wrapperRef.current || !wrapperRef2.current || !targetRef.current) {
         return
@@ -100,17 +87,7 @@ export function HeroSection() {
 
     // Initialize Scaling Elements on Scroll (GSAP Flip)
     initFlipOnScroll()
-  }, [isTransitioning, wrapperRef, wrapperRef2, targetRef])
-
-  useEffect(() => {
-    if (!isTransitioning) {
-      return
-    }
-
-    setTimeout(() => {
-      setIsTransitioning(false)
-    }, 410)
-  }, [isTransitioning])
+  }, [wrapperRef, wrapperRef2, targetRef])
 
   return (
     <section className='relative flex flex-col gap-10 mb-0 md:mb-16'>
@@ -154,7 +131,7 @@ export function HeroSection() {
               scale: { type: 'tween', visualDuration: 0.4 }
             }}
           >
-            <MotionImage
+            <Image
               src={HeroImage}
               alt='Da Nang Villa'
               className='w-full h-auto origin-top rounded-sm shadow-md'
@@ -169,21 +146,15 @@ export function HeroSection() {
           <div className='hidden md:block relative w-[20em] h-[20em]'>
             <div className='aspect-[1280/853]' />
 
-            <motion.div
+            <div
               ref={wrapperRef}
               className='absolute top-0 left-0 w-full h-full'
-              initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
-              animate={{ opacity: 1, scale: 1, translateY: 0 }}
-              transition={{
-                duration: 0.4,
-                scale: { type: 'tween', visualDuration: 0.4 }
-              }}
             >
               <div
                 ref={targetRef}
                 className='absolute top-0 left-0 w-full h-full isolate will-change-transform transform-[translateY(0)] flex flex-col items-center justify-center'
               >
-                <MotionImage
+                <Image
                   src={HeroImage}
                   alt='Da Nang Villa'
                   className='w-full h-auto origin-top rounded-sm shadow-md'
@@ -194,7 +165,7 @@ export function HeroSection() {
                   blurDataURL={HeroImage.blurDataURL}
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -202,15 +173,9 @@ export function HeroSection() {
           <div className='relative w-full'>
             <div className='aspect-[1280/853]' />
 
-            <motion.div
+            <div
               ref={wrapperRef2}
               className='absolute top-0 left-0 w-full h-full'
-              initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
-              animate={{ opacity: 1, scale: 1, translateY: 0 }}
-              transition={{
-                duration: 0.4,
-                scale: { type: 'tween', visualDuration: 0.4 }
-              }}
             />
 
             <div className='w-full text-center text-sm italic pt-8 text-muted-foreground'>
