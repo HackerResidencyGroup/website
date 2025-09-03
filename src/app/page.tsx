@@ -40,6 +40,8 @@ export default function TheBestDamnLandingPageEver() {
 
       <LocationSection />
 
+      <SponsorSection />
+
       {/* CTA section */}
       <section className='flex flex-col gap-8 pb-16 items-center'>
         <motion.h2
@@ -230,6 +232,60 @@ function StorySectionWhy() {
           <p>3. Make friends, vibe, and learn from each other! 🤙</p>
         </div>
       </h3>
+    </section>
+  )
+}
+
+function SponsorSection() {
+  return (
+    <section className='relative flex flex-col gap-12 mb-16 px-4'>
+      <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
+        Sponsors
+      </h2>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 dark:hidden'>
+        <Link href='https://coderabbit.ai' target='_blank'>
+          <img
+            src='/sponsors/coderabbit-light.svg'
+            alt='CodeRabbit'
+            className='w-full'
+          />
+        </Link>
+
+        <Link href='https://openrouter.ai' target='_blank'>
+          <img
+            src='/sponsors/openrouter-light.svg'
+            alt='OpenRouter'
+            className='w-full'
+          />
+        </Link>
+
+        <Link href='https://n8n.io' target='_blank'>
+          <img src='/sponsors/n8n-light.svg' alt='N8N' className='w-full' />
+        </Link>
+      </div>
+
+      <div className='grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 hidden dark:grid'>
+        <Link href='https://coderabbit.ai' target='_blank'>
+          <img
+            src='/sponsors/coderabbit-dark.svg'
+            alt='CodeRabbit'
+            className='w-full'
+          />
+        </Link>
+
+        <Link href='https://openrouter.ai' target='_blank'>
+          <img
+            src='/sponsors/openrouter-dark.svg'
+            alt='OpenRouter'
+            className='w-full'
+          />
+        </Link>
+
+        <Link href='https://n8n.io' target='_blank'>
+          <img src='/sponsors/n8n-dark.svg' alt='N8N' className='w-full' />
+        </Link>
+      </div>
     </section>
   )
 }
