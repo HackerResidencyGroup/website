@@ -6,7 +6,7 @@ import { LinkedInIcon } from '@/icons/linkedin'
 import { TwitterIcon } from '@/icons/twitter'
 import David from '@/public/people/david.jpg'
 import Phuc from '@/public/people/phuc.jpg'
-import Tony from '@/public/people/tony.png'
+import Tony from '@/public/people/tony.jpg'
 import Travis from '@/public/people/travis.jpg'
 
 const people = [

@@ -252,7 +252,7 @@ function SponsorSection() {
           />
         </Link>
 
-        <Link href='https://openrouter.ai' target='_blank'>
+        <Link href=' https://openrouter.ai/?referral=hrg' target='_blank'>
           <img
             src='/sponsors/openrouter-light.svg'
             alt='OpenRouter'
@@ -274,7 +274,7 @@ function SponsorSection() {
           />
         </Link>
 
-        <Link href='https://openrouter.ai' target='_blank'>
+        <Link href='https://openrouter.ai/?referral=hrg' target='_blank'>
           <img
             src='/sponsors/openrouter-dark.svg'
             alt='OpenRouter'
