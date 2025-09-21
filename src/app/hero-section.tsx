@@ -120,7 +120,7 @@ export function HeroSection() {
               scale: { type: 'tween', visualDuration: 0.4 }
             }}
           >
-            November 2025
+            November 1st – 30th, 2025
           </motion.p>
 
           <motion.div

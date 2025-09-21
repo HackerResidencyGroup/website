@@ -4,22 +4,16 @@ import { motion } from 'motion/react'
 import Link from 'next/link'
 
 import { HeroButton } from '@/components/hero-button'
-import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
 import { twitterUrl } from '@/lib/config'
 
-// import { TallyForm } from './tally-form'
-
-export default function ApplicationPage() {
+export default function CTASection() {
   return (
     <>
-      <RaycastAnimatedBackground />
-
-      <section className='relative z-10 w-full flex flex-col gap-8 max-w-3xl flex-1 justify-center '>
-        <h2 className='text-center text-balance font-semibold text-3xl font-heading'>
-          Application Form
+      {/* CTA section */}
+      <section className='relative z-10 flex flex-col gap-8 pb-16 items-center'>
+        <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
+          Sounds cool, right?
         </h2>
-
-        {/* <TallyForm /> */}
 
         <motion.h3
           className='text-center text-balance text-2xl leading-normal max-w-3xl'

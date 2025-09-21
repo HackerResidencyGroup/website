@@ -1,21 +1,19 @@
 'use client'
 
-import { motion } from 'motion/react'
 import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { useRef } from 'react'
 import { PhotoView } from 'react-photo-view'
 
 import { Card } from '@/components/card'
-import { HeroButton } from '@/components/hero-button'
 import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
-// import { ParticleAnimation } from '@/components/particle-animation'
 import Villa0 from '@/public/da-nang-villa/0.jpg'
 import Villa1 from '@/public/da-nang-villa/1.jpg'
 import Villa2 from '@/public/da-nang-villa/4.jpg'
 import Villa3 from '@/public/da-nang-villa/8.jpg'
 
 import { useAnimatedStoryText } from './animated-story-text'
+import CTASection from './cta-section'
 import { HeroSection } from './hero-section'
 import { LocationSection } from './location-section'
 import { TeamSection } from './team-section'
@@ -46,39 +44,7 @@ export default function TheBestDamnLandingPageEver() {
 
       <SponsorSection />
 
-      {/* CTA section */}
-      <section className='relative z-10 flex flex-col gap-8 pb-16 items-center'>
-        <motion.h2
-          className='text-center text-balance text-3xl font-heading leading-relaxed'
-          initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
-          whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
-          transition={{
-            duration: 0.15,
-            scale: { type: 'tween', visualDuration: 0.15 }
-          }}
-        >
-          Sounds cool?
-          <br />
-          Apply to come build with us!
-        </motion.h2>
-
-        <motion.p
-          className='text-center text-pretty text-md leading-normal italic'
-          initial={{ opacity: 0, scale: 0, translateY: -20 }}
-          whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
-          transition={{
-            delay: 0.15,
-            duration: 0.15,
-            scale: { type: 'tween', visualDuration: 0.15 }
-          }}
-        >
-          November 1st – 30th, 2025
-        </motion.p>
-
-        <HeroButton heroVariant='red'>
-          <Link href='/apply'>Apply Now</Link>
-        </HeroButton>
-      </section>
+      <CTASection />
     </>
   )
 }
