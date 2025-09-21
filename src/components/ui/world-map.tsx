@@ -101,11 +101,11 @@ export function WorldMap({
                     }}
                     transition={{
                       duration: 1,
-                      delay: 0.25 * i,
+                      delay: 2 + 0.25 * i,
                       ease: 'easeOut'
                     }}
                     key={`start-upper-${i}`}
-                  ></motion.path>
+                  />
                 </g>
               )
             })}
