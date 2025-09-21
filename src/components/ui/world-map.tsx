@@ -56,7 +56,9 @@ export function WorldMap({
   const svgRef = useRef<SVGSVGElement>(null)
   const [isMounted, setIsMounted] = useState(false)
   useEffect(() => {
-    setIsMounted(true)
+    setTimeout(() => {
+      setIsMounted(true)
+    }, 2000)
   }, [])
 
   return (
