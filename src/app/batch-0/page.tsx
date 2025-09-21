@@ -88,6 +88,16 @@ export default function ApplicationPage() {
           HRG Batch 0
         </h2>
 
+        <div className='flex flex-col gap-2'>
+          <p className='text-center text-pretty text-md leading-normal'>
+            Da Nang, Vietnam
+          </p>
+
+          <p className='text-center text-pretty text-sm italic leading-normal'>
+            November 1st – 30th, 2025
+          </p>
+        </div>
+
         <Card className='w-full'>
           <WorldMap dots={dots} />
         </Card>
