@@ -12,7 +12,7 @@ export default async function FAQPage() {
 
   return (
     <>
-      <RaycastAnimatedBackground />
+      <RaycastAnimatedBackground className='opacity-50' />
 
       <div className='relative z-10 flex flex-col gap-8 max-w-full'>
         <h2 className='text-center text-balance font-semibold text-3xl font-heading'>

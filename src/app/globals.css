@@ -167,7 +167,8 @@ a:focus .link,
 a:hover .link {
   border-bottom-color: transparent;
 
-  background-image: linear-gradient(90.68deg, #b439df 0.26%, #e5337e 102.37%);
+  /* background-image: linear-gradient(90.68deg, #b439df 0.26%, #e5337e 102.37%); */
+  background-image: linear-gradient(90.68deg, #df393c 0.26%, #e54833 102.37%);
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 0.1rem;

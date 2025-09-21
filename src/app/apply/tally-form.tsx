@@ -41,7 +41,7 @@ export function TallyForm() {
         frameBorder={0}
         marginHeight={0}
         marginWidth={0}
-        className='w-full dark:rounded-lg dark:shadow-lg p-4 dark:bg-white'
+        className='w-full rounded-lg shadow-lg p-4 bg-card'
         title='Da Nang Hacker Residency'
       />
 

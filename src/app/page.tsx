@@ -74,7 +74,7 @@ export default function TheBestDamnLandingPageEver() {
           November 1st – 30th, 2025
         </motion.p>
 
-        <HeroButton heroVariant='orange'>
+        <HeroButton heroVariant='red'>
           <Link href='/apply'>Apply Now</Link>
         </HeroButton>
       </section>
@@ -247,48 +247,56 @@ function SponsorSection() {
       </h2>
 
       <div className='grid grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 dark:hidden'>
-        <Link href='https://coderabbit.ai' target='_blank'>
-          <img
-            src='/sponsors/coderabbit-light.svg'
-            alt='CodeRabbit'
-            className='w-full'
-          />
-        </Link>
+        <Sponsor
+          href='https://coderabbit.ai'
+          src='/sponsors/coderabbit-light.svg'
+          alt='CodeRabbit'
+        />
 
-        <Link href=' https://openrouter.ai/?referral=hrg' target='_blank'>
-          <img
-            src='/sponsors/openrouter-light.svg'
-            alt='OpenRouter'
-            className='w-full'
-          />
-        </Link>
+        <Sponsor
+          href=' https://openrouter.ai/?referral=hrg'
+          src='/sponsors/openrouter-light.svg'
+          alt='OpenRouter'
+        />
 
-        <Link href='https://n8n.io' target='_blank'>
-          <img src='/sponsors/n8n-light.svg' alt='N8N' className='w-full' />
-        </Link>
+        <Sponsor
+          href='https://n8n.io'
+          src='/sponsors/n8n-light.svg'
+          alt='N8N'
+        />
       </div>
 
       <div className='grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 hidden dark:grid'>
-        <Link href='https://coderabbit.ai' target='_blank'>
-          <img
-            src='/sponsors/coderabbit-dark.svg'
-            alt='CodeRabbit'
-            className='w-full'
-          />
-        </Link>
+        <Sponsor
+          href='https://coderabbit.ai'
+          src='/sponsors/coderabbit-dark.svg'
+          alt='CodeRabbit'
+        />
 
-        <Link href='https://openrouter.ai/?referral=hrg' target='_blank'>
-          <img
-            src='/sponsors/openrouter-dark.svg'
-            alt='OpenRouter'
-            className='w-full'
-          />
-        </Link>
+        <Sponsor
+          href=' https://openrouter.ai/?referral=hrg'
+          src='/sponsors/openrouter-dark.svg'
+          alt='OpenRouter'
+        />
 
-        <Link href='https://n8n.io' target='_blank'>
-          <img src='/sponsors/n8n-dark.svg' alt='N8N' className='w-full' />
-        </Link>
+        <Sponsor href='https://n8n.io' src='/sponsors/n8n-dark.svg' alt='N8N' />
       </div>
     </section>
+  )
+}
+
+function Sponsor({
+  href,
+  src,
+  alt
+}: {
+  href: string
+  src: string
+  alt: string
+}) {
+  return (
+    <Link href={href} target='_blank'>
+      <img src={src} alt={alt} className='w-full' />
+    </Link>
   )
 }

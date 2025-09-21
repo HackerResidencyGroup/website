@@ -157,7 +157,7 @@ export function HeroSection() {
                 <Image
                   src={HeroImage}
                   alt='Da Nang Villa'
-                  className='w-full h-auto origin-top rounded-sm shadow-md'
+                  className='w-full h-auto origin-top rounded-md shadow-lg'
                   placeholder='blur'
                   priority={true}
                   width={HeroImage.width}
@@ -178,7 +178,7 @@ export function HeroSection() {
               className='absolute top-0 left-0 w-full h-full'
             />
 
-            <div className='w-full text-center text-sm italic pt-8 text-muted-foreground'>
+            <div className='w-full text-center text-sm italic pt-8 text-accent-foreground'>
               (this is the actual villa you'll be staying in)
             </div>
           </div>

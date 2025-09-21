@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 import styles from './styles.module.css'
 
-export type HeroButtonVariant = 'orange' | 'blue' | 'purple'
+export type HeroButtonVariant = 'orange' | 'blue' | 'purple' | 'red'
 
 export type HeroButtonProps = Simplify<
   {
@@ -34,6 +34,10 @@ export function HeroButton({
 
       {heroVariant === 'orange' && (
         <span className={cn(styles.heroButtonBg, styles.heroButtonBg3)} />
+      )}
+
+      {heroVariant === 'red' && (
+        <span className={cn(styles.heroButtonBg, styles.heroButtonBg4)} />
       )}
 
       <Button

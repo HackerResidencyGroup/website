@@ -22,6 +22,11 @@
   /* animation: heroBgAnimation3 8s infinite; */
 }
 
+.heroButtonBg4 {
+  --start-color: #f8d6d3;
+  --end-color: #fb0a0a;
+}
+
 .heroButtonBg {
   position: absolute;
   top: 0;

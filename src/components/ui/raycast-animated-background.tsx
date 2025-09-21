@@ -1,7 +1,8 @@
 'use client'
 
+import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
-import { UnicornScene } from 'unicornstudio-react'
+import { UnicornScene } from 'unicornstudio-react/next'
 
 import { cn } from '@/lib/utils'
 
@@ -44,6 +45,8 @@ export function RaycastAnimatedBackground({
 } = {}) {
   const { width, height } = useWindowSize()
   const [isMounted, setIsMounted] = useState(false)
+  const { resolvedTheme } = useTheme()
+  const isDarkMode = resolvedTheme === 'dark'
 
   useEffect(() => {
     if (!isMounted) {
@@ -59,13 +62,13 @@ export function RaycastAnimatedBackground({
   return (
     <div
       className={cn(
-        'fixed top-0 left-0 bottom-0 right-0 flex flex-col items-center',
+        'fixed top-0 left-0 bottom-0 right-0 flex flex-col items-center opacity-80',
         className
       )}
     >
       <UnicornScene
         production={true}
-        projectId='cbmTT38A0CcuYxeiyj5H'
+        jsonFilePath={`/animations/raycast-${isDarkMode ? 'dark' : 'light'}.json`}
         width={width}
         height={height}
       />
