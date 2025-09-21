@@ -111,7 +111,7 @@ const people = [
 
 export function TeamSection() {
   return (
-    <section className='relative flex flex-col gap-16 mb-16' id='team'>
+    <section className='relative z-10 flex flex-col gap-16 mb-16' id='team'>
       <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
         Led by world-class hackers
       </h2>

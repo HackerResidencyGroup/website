@@ -90,7 +90,7 @@ export function HeroSection() {
   }, [wrapperRef, wrapperRef2, targetRef])
 
   return (
-    <section className='relative flex flex-col gap-10 mb-0 md:mb-16'>
+    <section className='relative z-10 flex flex-col gap-10 mb-0 md:mb-16'>
       <div className='relative overflow-hidden w-full max-w-7xl'>
         <div className='relative min-h-[70vh] md:min-h-[100vh] flex flex-col items-center justify-center'>
           <motion.h1

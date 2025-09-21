@@ -7,7 +7,8 @@ import { useRef } from 'react'
 import { PhotoView } from 'react-photo-view'
 
 import { HeroButton } from '@/components/hero-button'
-import { ParticleAnimation } from '@/components/particle-animation'
+import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
+// import { ParticleAnimation } from '@/components/particle-animation'
 import Villa0 from '@/public/da-nang-villa/0.jpg'
 import Villa1 from '@/public/da-nang-villa/1.jpg'
 import Villa2 from '@/public/da-nang-villa/4.jpg'
@@ -21,10 +22,12 @@ import { TeamSection } from './team-section'
 export default function TheBestDamnLandingPageEver() {
   return (
     <>
-      <ParticleAnimation
+      {/* <ParticleAnimation
         className='fixed top-0 left-0 bottom-0 right-0 opacity-50'
         particleSpeed={0.5}
-      />
+      /> */}
+
+      <RaycastAnimatedBackground />
 
       <HeroSection />
 
@@ -43,7 +46,7 @@ export default function TheBestDamnLandingPageEver() {
       <SponsorSection />
 
       {/* CTA section */}
-      <section className='flex flex-col gap-8 pb-16 items-center'>
+      <section className='relative z-10 flex flex-col gap-8 pb-16 items-center'>
         <motion.h2
           className='text-center text-balance text-3xl font-heading leading-relaxed'
           initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
@@ -84,7 +87,7 @@ function StorySectionIntro() {
   useAnimatedStoryText(ref)
 
   return (
-    <section className='relative flex flex-col gap-10 mb-16'>
+    <section className='relative z-10 flex flex-col gap-10 mb-16'>
       <h3
         ref={ref}
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
@@ -183,7 +186,7 @@ function StorySectionPricing() {
   useAnimatedStoryText(ref)
 
   return (
-    <section className='relative flex flex-col gap-12 mb-16'>
+    <section className='relative z-10 flex flex-col gap-12 mb-16'>
       <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
         And the best part is it's 100% free
       </h2>
@@ -238,7 +241,7 @@ function StorySectionWhy() {
 
 function SponsorSection() {
   return (
-    <section className='relative flex flex-col gap-12 mb-16 px-4'>
+    <section className='relative z-10 flex flex-col gap-12 mb-16 px-4'>
       <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
         Sponsors
       </h2>

@@ -12,7 +12,7 @@ export function LocationSection() {
   useAnimatedStoryText(ref)
 
   return (
-    <section className='relative flex flex-col gap-12 mb-16'>
+    <section className='relative z-10 flex flex-col gap-12 mb-16'>
       <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
         Why Vietnam?
       </h2>
