@@ -1,10 +1,13 @@
 import Link from 'next/link'
 
 import { ActiveLink } from '@/components/active-link'
+import { Button } from '@/components/ui/button'
 import { GitHubIcon } from '@/icons/github'
-import { githubUrl } from '@/lib/config'
+import { TwitterIcon } from '@/icons/twitter'
+import { githubUrl, twitterUrl } from '@/lib/config'
 import { cn } from '@/lib/utils'
 
+import { DarkModeToggle } from '../dark-mode-toggle'
 import styles from './styles.module.css'
 
 export function Footer() {
@@ -15,30 +18,37 @@ export function Footer() {
         styles.footer
       )}
     >
-      <div className='container px-4 sm:px-6 max-w-1200px'>
-        <nav className='flex flex-row gap-8 justify-center'>
-          <ActiveLink href='/' className='link'>
-            Home
-          </ActiveLink>
+      <div className='container px-4 sm:px-6 max-w-[1200px]'>
+        <nav className='flex flex-row gap-8 justify-between items-center'>
+          <div className='flex flex-row gap-8 items-center'>
+            <ActiveLink href='/' className='link'>
+              Home
+            </ActiveLink>
 
-          <ActiveLink href='/apply' className='link'>
-            Apply
-          </ActiveLink>
+            <ActiveLink href='/apply' className='link'>
+              Apply
+            </ActiveLink>
 
-          <ActiveLink href='/faq' className='link'>
-            FAQ
-          </ActiveLink>
+            <ActiveLink href='/faq' className='link'>
+              FAQ
+            </ActiveLink>
+          </div>
 
-          <Link
-            href={githubUrl}
-            className='link whitespace-nowrap flex flex-row gap-2 items-center'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <GitHubIcon className='w-4 h-4' />
+          <div className='flex flex-row justify-end items-center gap-4'>
+            <DarkModeToggle />
 
-            <span>GitHub</span>
-          </Link>
+            <Button variant='outline' size='icon' asChild>
+              <Link href={githubUrl} target='_blank' rel='noopener noreferrer'>
+                <GitHubIcon className='w-4 h-4' />
+              </Link>
+            </Button>
+
+            <Button variant='outline' size='icon' asChild>
+              <Link href={twitterUrl} target='_blank' rel='noopener noreferrer'>
+                <TwitterIcon className='w-4 h-4' />
+              </Link>
+            </Button>
+          </div>
         </nav>
       </div>
     </footer>

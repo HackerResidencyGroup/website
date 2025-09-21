@@ -11,7 +11,7 @@ export const domain =
   'hackerresidencygroup.com'
 
 export const author = 'Travis Fischer'
-export const authorTwitterUsername = 'transitive_bs'
+export const authorTwitterUsername = 'HackerResidency'
 export const copyright = `© ${new Date().getFullYear()} Hacker Residency Group. All rights reserved.`
 
 // external urls
@@ -22,8 +22,8 @@ export const moreInfoUrl =
 
 export const authors = [
   {
-    name: author,
-    url: twitterUrl
+    name: 'Travis Fischer',
+    url: 'https://x.com/transitive_bs'
   },
   {
     name: 'Tony Dinh',

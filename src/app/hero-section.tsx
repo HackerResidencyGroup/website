@@ -8,6 +8,7 @@ import Image from 'next/image'
 import raf from 'raf'
 import { useEffect, useRef } from 'react'
 
+import { Card } from '@/components/card'
 import HeroImage from '@/public/da-nang-villa/hero.jpg'
 
 gsap.registerPlugin(ScrollTrigger, Flip)
@@ -131,16 +132,18 @@ export function HeroSection() {
               scale: { type: 'tween', visualDuration: 0.4 }
             }}
           >
-            <Image
-              src={HeroImage}
-              alt='Da Nang Villa'
-              className='w-full h-auto origin-top rounded-sm shadow-md'
-              placeholder='blur'
-              priority={true}
-              width={HeroImage.width}
-              height={HeroImage.height}
-              blurDataURL={HeroImage.blurDataURL}
-            />
+            <Card>
+              <Image
+                src={HeroImage}
+                alt='Da Nang Villa'
+                className='w-full h-auto origin-top rounded-3xl'
+                placeholder='blur'
+                priority={true}
+                width={HeroImage.width}
+                height={HeroImage.height}
+                blurDataURL={HeroImage.blurDataURL}
+              />
+            </Card>
           </motion.div>
 
           <div className='hidden md:block relative w-[20em] h-[20em]'>
@@ -154,16 +157,18 @@ export function HeroSection() {
                 ref={targetRef}
                 className='absolute top-0 left-0 w-full h-full isolate will-change-transform transform-[translateY(0)] flex flex-col items-center justify-center'
               >
-                <Image
-                  src={HeroImage}
-                  alt='Da Nang Villa'
-                  className='w-full h-auto origin-top rounded-md shadow-lg'
-                  placeholder='blur'
-                  priority={true}
-                  width={HeroImage.width}
-                  height={HeroImage.height}
-                  blurDataURL={HeroImage.blurDataURL}
-                />
+                <Card>
+                  <Image
+                    src={HeroImage}
+                    alt='Da Nang Villa'
+                    className='w-full h-auto origin-top rounded-3xl'
+                    placeholder='blur'
+                    priority={true}
+                    width={HeroImage.width}
+                    height={HeroImage.height}
+                    blurDataURL={HeroImage.blurDataURL}
+                  />
+                </Card>
               </div>
             </div>
           </div>
@@ -178,9 +183,9 @@ export function HeroSection() {
               className='absolute top-0 left-0 w-full h-full'
             />
 
-            <div className='w-full text-center text-sm italic pt-8 text-accent-foreground'>
+            {/* <div className='w-full text-center text-sm italic pt-8 text-accent-foreground'>
               (this is the actual villa you'll be staying in)
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

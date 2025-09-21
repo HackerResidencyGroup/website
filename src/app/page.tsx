@@ -1,11 +1,12 @@
 'use client'
 
 import { motion } from 'motion/react'
-import Image from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { useRef } from 'react'
 import { PhotoView } from 'react-photo-view'
 
+import { Card } from '@/components/card'
 import { HeroButton } from '@/components/hero-button'
 import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
 // import { ParticleAnimation } from '@/components/particle-animation'
@@ -129,53 +130,10 @@ function StorySectionWhat() {
       </h3>
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl'>
-        <PhotoView src={Villa0.src}>
-          <Image
-            src={Villa0.src}
-            alt='Da Nang Villa'
-            placeholder='blur'
-            width={Villa0.width}
-            height={Villa0.height}
-            blurDataURL={Villa0.blurDataURL}
-            className='rounded-sm shadow-sm cursor-pointer'
-          />
-        </PhotoView>
-
-        <PhotoView src={Villa1.src}>
-          <Image
-            src={Villa1.src}
-            alt='Da Nang Villa'
-            placeholder='blur'
-            width={Villa1.width}
-            height={Villa1.height}
-            blurDataURL={Villa1.blurDataURL}
-            className='rounded-sm shadow-sm cursor-pointer'
-          />
-        </PhotoView>
-
-        <PhotoView src={Villa2.src}>
-          <Image
-            src={Villa2.src}
-            alt='Da Nang Villa'
-            placeholder='blur'
-            width={Villa2.width}
-            height={Villa2.height}
-            blurDataURL={Villa2.blurDataURL}
-            className='rounded-sm shadow-sm cursor-pointer'
-          />
-        </PhotoView>
-
-        <PhotoView src={Villa3.src}>
-          <Image
-            src={Villa3.src}
-            alt='Da Nang Villa'
-            placeholder='blur'
-            width={Villa3.width}
-            height={Villa3.height}
-            blurDataURL={Villa3.blurDataURL}
-            className='rounded-sm shadow-sm cursor-pointer'
-          />
-        </PhotoView>
+        <FeaturedPhoto image={Villa0} />
+        <FeaturedPhoto image={Villa1} />
+        <FeaturedPhoto image={Villa2} />
+        <FeaturedPhoto image={Villa3} />
       </div>
     </section>
   )
@@ -298,5 +256,29 @@ function Sponsor({
     <Link href={href} target='_blank'>
       <img src={src} alt={alt} className='w-full' />
     </Link>
+  )
+}
+
+function FeaturedPhoto({
+  image,
+  alt = 'Da Nang Villa'
+}: {
+  image: StaticImageData
+  alt?: string
+}) {
+  return (
+    <Card>
+      <PhotoView src={image.src}>
+        <Image
+          src={image.src}
+          alt={alt}
+          placeholder='blur'
+          width={image.width}
+          height={image.height}
+          blurDataURL={image.blurDataURL}
+          className='rounded-3xl shadow-sm cursor-pointer'
+        />
+      </PhotoView>
+    </Card>
   )
 }
