@@ -1,8 +1,10 @@
 'use client'
 
+import Link from 'next/link'
 import random from 'random'
 
 import { Card } from '@/components/card'
+import { HeroButton } from '@/components/hero-button'
 import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
 import { WorldMap } from '@/components/ui/world-map'
 // import { TallyForm } from './tally-form'
@@ -101,6 +103,10 @@ export default function ApplicationPage() {
         <Card className='w-full'>
           <WorldMap dots={dots} />
         </Card>
+
+        <HeroButton heroVariant='red'>
+          <Link href='/'>stack.pop();</Link>
+        </HeroButton>
       </section>
     </>
   )

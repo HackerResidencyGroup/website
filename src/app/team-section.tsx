@@ -28,7 +28,7 @@ const people = [
         <Link href='https://hf0.com' target='_blank' className='link'>
           HF0
         </Link>
-        , Microsoft Research, and Amazon.
+        , Microsoft, and Amazon.
       </>
     )
   },
