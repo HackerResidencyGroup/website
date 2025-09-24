@@ -217,7 +217,7 @@ function SponsorSection() {
 
         <Sponsor
           href='https://www.datahouse.com?from=hrg'
-          src='/sponsors/datahouse-light.png'
+          src='/sponsors/datahouse-dark.png'
           alt='Datahouse'
         />
       </div>
