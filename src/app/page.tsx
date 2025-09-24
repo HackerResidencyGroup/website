@@ -172,38 +172,54 @@ function SponsorSection() {
 
       <div className='grid grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 dark:hidden'>
         <Sponsor
-          href='https://coderabbit.ai'
+          href='https://coderabbit.ai?from=hrg'
           src='/sponsors/coderabbit-light.svg'
           alt='CodeRabbit'
         />
 
         <Sponsor
-          href=' https://openrouter.ai/?referral=hrg'
+          href=' https://openrouter.ai?referral=hrg'
           src='/sponsors/openrouter-light.svg'
           alt='OpenRouter'
         />
 
         <Sponsor
-          href='https://n8n.io'
+          href='https://n8n.io?from=hrg'
           src='/sponsors/n8n-light.svg'
           alt='N8N'
+        />
+
+        <Sponsor
+          href='https://www.datahouse.com?from=hrg'
+          src='/sponsors/datahouse-light.png'
+          alt='Datahouse'
         />
       </div>
 
       <div className='grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 hidden dark:grid'>
         <Sponsor
-          href='https://coderabbit.ai'
+          href='https://coderabbit.ai?from=hrg'
           src='/sponsors/coderabbit-dark.svg'
           alt='CodeRabbit'
         />
 
         <Sponsor
-          href=' https://openrouter.ai/?referral=hrg'
+          href=' https://openrouter.ai?referral=hrg'
           src='/sponsors/openrouter-dark.svg'
           alt='OpenRouter'
         />
 
-        <Sponsor href='https://n8n.io' src='/sponsors/n8n-dark.svg' alt='N8N' />
+        <Sponsor
+          href='https://n8n.io?from=hrg'
+          src='/sponsors/n8n-dark.svg'
+          alt='N8N'
+        />
+
+        <Sponsor
+          href='https://www.datahouse.com?from=hrg'
+          src='/sponsors/datahouse-light.png'
+          alt='Datahouse'
+        />
       </div>
     </section>
   )
