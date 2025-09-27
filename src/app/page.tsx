@@ -194,6 +194,12 @@ function SponsorSection() {
           src='/sponsors/datahouse-light.png'
           alt='Datahouse'
         />
+
+        <Sponsor
+          href='https://parallel.ai?from=hrg'
+          src='/sponsors/parallel-light.svg'
+          alt='Parallel.ai'
+        />
       </div>
 
       <div className='grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 hidden dark:grid'>
@@ -219,6 +225,12 @@ function SponsorSection() {
           href='https://www.datahouse.com?from=hrg'
           src='/sponsors/datahouse-dark.png'
           alt='Datahouse'
+        />
+
+        <Sponsor
+          href='https://parallel.ai?from=hrg'
+          src='/sponsors/parallel-dark.svg'
+          alt='Parallel.ai'
         />
       </div>
     </section>
