@@ -200,9 +200,15 @@ function SponsorSection() {
           src='/sponsors/parallel-light.svg'
           alt='Parallel.ai'
         />
+
+        <Sponsor
+          href='https://stainless.com?from=hrg'
+          src='/sponsors/stainless-light.png'
+          alt='Stainless'
+        />
       </div>
 
-      <div className='grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 hidden dark:grid'>
+      <div className='grid-cols-1 md:grid-cols-2 items-center max-w-4xl gap-16 hidden dark:grid'>
         <Sponsor
           href='https://coderabbit.ai?from=hrg'
           src='/sponsors/coderabbit-dark.svg'
@@ -231,6 +237,12 @@ function SponsorSection() {
           href='https://parallel.ai?from=hrg'
           src='/sponsors/parallel-dark.svg'
           alt='Parallel.ai'
+        />
+
+        <Sponsor
+          href='https://stainless.com?from=hrg'
+          src='/sponsors/stainless-dark.png'
+          alt='Stainless'
         />
       </div>
     </section>
