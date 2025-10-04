@@ -7,6 +7,7 @@ import { PhotoView } from 'react-photo-view'
 
 import { Card } from '@/components/card'
 import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
+import { cn } from '@/lib/utils'
 import Villa0 from '@/public/da-nang-villa/0.jpg'
 import Villa1 from '@/public/da-nang-villa/1.jpg'
 import Villa2 from '@/public/da-nang-villa/4.jpg'
@@ -206,6 +207,13 @@ function SponsorSection() {
           src='/sponsors/stainless-light.png'
           alt='Stainless'
         />
+
+        <Sponsor
+          href='https://exa.ai?from=hrg'
+          src='/sponsors/exa-light.svg'
+          alt='Exa'
+          className='max-h-16'
+        />
       </div>
 
       <div className='grid-cols-1 md:grid-cols-2 items-center max-w-4xl gap-16 hidden dark:grid'>
@@ -244,6 +252,13 @@ function SponsorSection() {
           src='/sponsors/stainless-dark.png'
           alt='Stainless'
         />
+
+        <Sponsor
+          href='https://exa.ai?from=hrg'
+          src='/sponsors/exa-dark.svg'
+          alt='Exa'
+          className='max-h-16'
+        />
       </div>
     </section>
   )
@@ -252,15 +267,17 @@ function SponsorSection() {
 function Sponsor({
   href,
   src,
-  alt
+  alt,
+  className
 }: {
   href: string
   src: string
   alt: string
+  className?: string
 }) {
   return (
     <Link href={href} target='_blank'>
-      <img src={src} alt={alt} className='w-full' />
+      <img src={src} alt={alt} className={cn('w-full max-h-24', className)} />
     </Link>
   )
 }
