@@ -209,6 +209,12 @@ function SponsorSection() {
         />
 
         <Sponsor
+          href='https://cognition.ai?from=hrg'
+          src='/sponsors/cognition-light.svg'
+          alt='Cognition'
+        />
+
+        <Sponsor
           href='https://exa.ai?from=hrg'
           src='/sponsors/exa-light.svg'
           alt='Exa'
@@ -251,6 +257,12 @@ function SponsorSection() {
           href='https://stainless.com?from=hrg'
           src='/sponsors/stainless-dark.png'
           alt='Stainless'
+        />
+
+        <Sponsor
+          href='https://cognition.ai?from=hrg'
+          src='/sponsors/cognition-dark.png'
+          alt='Cognition'
         />
 
         <Sponsor
