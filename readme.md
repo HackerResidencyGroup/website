@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://hackerresidencygroup.com">
-    <img alt="Hacker Residency Group" src="https://raw.githubusercontent.com/HackerResidencyGroup/website/main/public/hrg-social-image-dark.png" width="640">
+    <img alt="Hacker Residency Group" src="https://raw.githubusercontent.com/HackerResidencyGroup/website/main/src/app/waitlist/opengraph-image.png" width="640">
   </a>
 </p>
 
@@ -11,7 +11,7 @@
 
 # Hacker Residency Group <!-- omit from toc -->
 
-> A new type of experimental Hacker Residency with the first cohort taking place in Da Nang, Vietnam during the month of November, 2025.
+> HRG is a new type of Hacker Residency in Southeast Asia. Our first cohort is taking place in Da Nang, Vietnam right now (November, 2025).
 
 See the [site](https://hackerresidencygroup.com) for details. 💪
 
