@@ -9,11 +9,11 @@
   <a href="https://prettier.io"><img alt="Prettier Code Formatting" src="https://img.shields.io/badge/code_style-prettier-brightgreen.svg" /></a>
 </p>
 
-# Hacker Residency Group <!-- omit from toc -->
+# HRG <!-- omit from toc -->
 
-> HRG is a new type of Hacker Residency in Southeast Asia. Our first cohort is taking place in Da Nang, Vietnam right now (November, 2025).
+> HRG is a new type of **Hacker Residency** in Southeast Asia. Our first cohort is taking place in Da Nang, Vietnam RIGHT NOW (November, 2025).
 
-See the [site](https://hackerresidencygroup.com) for details. 💪
+See the [site](https://hackerresidencygroup.com) for details, and [follow our journey on X](https://x.com/HackerResidency) for updates. 💪
 
 ## License
 

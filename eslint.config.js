@@ -1,10 +1,1 @@
-import { config } from '@fisch0920/config/eslint'
-
-export default [
-  ...config,
-  {
-    rules: {
-      'react-hooks/set-state-in-effect': 'off'
-    }
-  }
-]
+export { config as default } from '@fisch0920/config/eslint'
