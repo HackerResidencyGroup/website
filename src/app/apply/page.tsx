@@ -1,45 +1,5 @@
-'use client'
-
-import { motion } from 'motion/react'
-import Link from 'next/link'
-
-import { HeroButton } from '@/components/hero-button'
-import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
-import { twitterUrl } from '@/lib/config'
-
-// import { TallyForm } from './tally-form'
+import { redirect } from 'next/navigation'
 
 export default function ApplicationPage() {
-  return (
-    <>
-      <RaycastAnimatedBackground />
-
-      <section className='relative z-10 w-full flex flex-col gap-8 max-w-3xl flex-1 justify-center '>
-        <h2 className='text-center text-balance font-semibold text-3xl font-heading'>
-          Application Form
-        </h2>
-
-        {/* <TallyForm /> */}
-
-        <motion.h3
-          className='text-center text-balance text-2xl leading-normal max-w-3xl'
-          initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
-          whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
-          transition={{
-            duration: 0.15,
-            scale: { type: 'tween', visualDuration: 0.15 }
-          }}
-        >
-          Applications are now closed for our November 2025 batch in Vietnam,
-          but follow us on X for updates on the next batch!
-        </motion.h3>
-
-        <HeroButton heroVariant='red'>
-          <Link href={twitterUrl} target='_blank' rel='noopener noreferrer'>
-            Follow the journey on X
-          </Link>
-        </HeroButton>
-      </section>
-    </>
-  )
+  redirect('/waitlist')
 }

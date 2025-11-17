@@ -120,7 +120,7 @@ export function HeroSection() {
               scale: { type: 'tween', visualDuration: 0.4 }
             }}
           >
-            November 1st – 30th, 2025
+            Next batch coming soon in 2026...
           </motion.p>
 
           <motion.div

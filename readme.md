@@ -17,4 +17,4 @@ See the [site](https://hackerresidencygroup.com) for details. 💪
 
 ## License
 
-MIT © [Travis Fischer](https://x.com/transitive_bs)
+MIT © [HRG](https://x.com/HackerResidency)

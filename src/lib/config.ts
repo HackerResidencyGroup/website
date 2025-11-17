@@ -5,12 +5,12 @@ export const isSafari =
 
 export const title = 'Hacker Residency Group'
 export const description =
-  'A month-long residency program for world-class hackers in Da Nang, Vietnam. November 2025.'
+  'A month-long residency for world-class indie hackers.'
 export const domain =
   process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL ??
   'hackerresidencygroup.com'
 
-export const author = 'Travis Fischer'
+export const author = 'HRG'
 export const authorTwitterUsername = 'HackerResidency'
 export const copyright = `© ${new Date().getFullYear()} Hacker Residency Group. All rights reserved.`
 
@@ -48,6 +48,7 @@ export const keywords = [
   'residency',
   'da nang',
   'vietnam',
+  'HRG',
   'HF0',
   'HF0 residency',
   'startup residency',

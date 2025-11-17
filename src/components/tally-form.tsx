@@ -7,7 +7,13 @@ declare global {
   let Tally: any
 }
 
-export function TallyForm() {
+export function TallyForm({
+  tallyId,
+  title
+}: {
+  tallyId: string
+  title: string
+}) {
   useEffect(() => {
     const load = () => {
       // Load Tally embeds
@@ -34,15 +40,15 @@ export function TallyForm() {
   return (
     <>
       <iframe
-        data-tally-src='https://tally.so/embed/nGEE0L?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1'
+        data-tally-src={`https://tally.so/embed/${tallyId}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
         loading='lazy'
         width='100%'
         height='2622'
         frameBorder={0}
         marginHeight={0}
         marginWidth={0}
-        className='w-full rounded-lg shadow-lg p-4 bg-card'
-        title='Da Nang Hacker Residency'
+        className='w-full rounded-lg shadow-lg p-4 bg-white'
+        title={title}
       />
 
       <Script

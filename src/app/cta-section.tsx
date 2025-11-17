@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 import Link from 'next/link'
 
 import { HeroButton } from '@/components/hero-button'
-import { twitterUrl } from '@/lib/config'
+// import { twitterUrl } from '@/lib/config'
 
 export default function CTASection() {
   return (
@@ -15,7 +15,7 @@ export default function CTASection() {
           Sounds cool, right?
         </h2>
 
-        <motion.h3
+        {/* <motion.h3
           className='text-center text-balance text-2xl leading-normal max-w-3xl'
           initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
           whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
@@ -32,6 +32,24 @@ export default function CTASection() {
           <Link href={twitterUrl} target='_blank' rel='noopener noreferrer'>
             Follow the journey on X
           </Link>
+        </HeroButton> */}
+
+        <motion.h3
+          className='text-center text-balance text-2xl leading-normal max-w-3xl'
+          initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
+          whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
+          transition={{
+            duration: 0.15,
+            scale: { type: 'tween', visualDuration: 0.15 }
+          }}
+        >
+          We're currently wrapping up our first ever batch in Vietnam, but you
+          can join the waitlist for the next batch in 2026 which we'll be
+          announcing soon!
+        </motion.h3>
+
+        <HeroButton heroVariant='red'>
+          <Link href='/apply'>Get notified for the next batch</Link>
         </HeroButton>
       </section>
     </>

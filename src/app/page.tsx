@@ -22,11 +22,6 @@ import { TeamSection } from './team-section'
 export default function TheBestDamnLandingPageEver() {
   return (
     <>
-      {/* <ParticleAnimation
-        className='fixed top-0 left-0 bottom-0 right-0 opacity-50'
-        particleSpeed={0.5}
-      /> */}
-
       <RaycastAnimatedBackground />
 
       <HeroSection />
@@ -65,10 +60,12 @@ function StorySectionIntro() {
           for an entire month at a dope villa in SE Asia.
         </p>
 
-        <p>
+        <p>Next batch coming soon in 2026...</p>
+
+        {/* <p>
           November 1<span className='text-sm align-super'>st</span> – 30
           <span className='text-sm align-super'>th</span>, 2025.
-        </p>
+        </p> */}
       </h3>
     </section>
   )
