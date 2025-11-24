@@ -212,6 +212,12 @@ function SponsorSection() {
         />
 
         <Sponsor
+          href='https://www.createanything.com/?via=HRG'
+          src='/sponsors/anything-light.svg'
+          alt='Anything'
+        />
+
+        <Sponsor
           href='https://exa.ai?from=hrg'
           src='/sponsors/exa-light.svg'
           alt='Exa'
@@ -260,6 +266,12 @@ function SponsorSection() {
           href='https://cognition.ai?from=hrg'
           src='/sponsors/cognition-dark.png'
           alt='Cognition'
+        />
+
+        <Sponsor
+          href='https://www.createanything.com/?via=HRG'
+          src='/sponsors/anything-dark.svg'
+          alt='Anything'
         />
 
         <Sponsor
