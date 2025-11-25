@@ -18,3 +18,4 @@ See the [site](https://hackerresidencygroup.com) for details, and [follow our jo
 ## License
 
 MIT © [HRG](https://x.com/HackerResidency)
+
