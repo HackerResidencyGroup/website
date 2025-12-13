@@ -11,9 +11,14 @@
 
 # HRG <!-- omit from toc -->
 
-> HRG is a new type of **Hacker Residency** in Southeast Asia. Our first cohort is taking place in Da Nang, Vietnam RIGHT NOW (November, 2025).
+> HRG is a new type of **Hacker Residency** in Southeast Asia.
 
 See the [site](https://hackerresidencygroup.com) for details, and [follow our journey on X](https://x.com/HackerResidency) for updates. 💪
+
+## Cohorts
+
+- [Batch 0](https://www.hackerresidencygroup.com/batch-0) - November 2025 in Da Nang, Vietnam
+- Batch 1 – April 21 – May 31, 2026 in Da Nang, Vietnam
 
 ## License
 

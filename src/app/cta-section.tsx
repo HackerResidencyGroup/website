@@ -43,8 +43,7 @@ export default function CTASection() {
             scale: { type: 'tween', visualDuration: 0.15 }
           }}
         >
-          We're currently wrapping up our first ever batch in Vietnam, but you
-          can join the waitlist for the next batch in 2026 which we'll be
+          Join the waitlist for the next batch coming April 2026 which we'll be
           announcing soon!
         </motion.h3>
 

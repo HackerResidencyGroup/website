@@ -3,16 +3,15 @@ export const isServer = globalThis.window === undefined
 export const isSafari =
   !isServer && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
-export const title = 'Hacker Residency Group'
-export const description =
-  'A month-long residency for world-class indie hackers.'
+export const title = 'HRG'
+export const description = 'A month-long residency for world-class hackers.'
 export const domain =
   process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL ??
   'hackerresidencygroup.com'
 
 export const author = 'HRG'
 export const authorTwitterUsername = 'HackerResidency'
-export const copyright = `© ${new Date().getFullYear()} Hacker Residency Group. All rights reserved.`
+export const copyright = `© ${new Date().getFullYear()} HRG. All rights reserved.`
 
 // external urls
 export const twitterUrl = `https://x.com/${authorTwitterUsername}`
@@ -42,19 +41,25 @@ export const authors = [
 export const keywords = [
   'hacker residency',
   'hacker residency group',
+  'HRG',
   'hacker paradise',
   'indie hackers',
+  'indie hacker paradise',
+  'indie hacker bootcamp',
+  'MRR temple',
   'founders',
   'residency',
   'da nang',
   'vietnam',
-  'HRG',
   'HF0',
   'HF0 residency',
   'startup residency',
   'bootstrapping',
+  'bootstrapped founders',
   'startup founders',
-  'digital nomads'
+  'digital nomads',
+  'accelerator',
+  'incubator'
 ]
 
 export const env =

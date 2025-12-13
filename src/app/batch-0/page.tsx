@@ -80,7 +80,7 @@ const dots: Array<{
   }
 ])
 
-export default function BatchPage() {
+export default function Batch0Page() {
   return (
     <>
       <RaycastAnimatedBackground />
