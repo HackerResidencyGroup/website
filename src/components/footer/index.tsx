@@ -7,7 +7,7 @@ import { TwitterIcon } from '@/icons/twitter'
 import { githubUrl, twitterUrl } from '@/lib/config'
 import { cn } from '@/lib/utils'
 
-import { DarkModeToggle } from '../dark-mode-toggle'
+// import { DarkModeToggle } from '../dark-mode-toggle'
 import styles from './styles.module.css'
 
 export function Footer() {
@@ -35,7 +35,7 @@ export function Footer() {
           </div>
 
           <div className='flex flex-row justify-end items-center gap-4'>
-            <DarkModeToggle />
+            {/* <DarkModeToggle /> */}
 
             <Button variant='outline' size='icon' asChild>
               <Link href={githubUrl} target='_blank' rel='noopener noreferrer'>
