@@ -1,6 +1,7 @@
 {
   "extends": "@fisch0920/config/tsconfig-react",
   "compilerOptions": {
+    "skipLibCheck": true,
     "plugins": [
       {
         "name": "next"

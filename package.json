@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/HackerResidencyGroup/website.git"
   },
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.26.1",
   "engines": {
     "node": ">=20"
   },
