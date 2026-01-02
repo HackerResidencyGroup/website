@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:magicui.design)",
+      "WebFetch(domain:ui.aceternity.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}
