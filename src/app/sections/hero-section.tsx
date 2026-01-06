@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section className='relative z-10 flex flex-col items-center justify-center min-h-screen gap-6 px-4'>
       {/* Background Images - Split top/bottom */}
-      <div className='absolute inset-0 -z-10 overflow-hidden'>
+      <div className='absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen -z-10 overflow-hidden'>
         {/* Top half */}
         <div className='absolute inset-x-0 top-0 h-1/2'>
           <Image
@@ -42,14 +42,19 @@ export function HeroSection() {
 
       <BlurFade delay={0.15}>
         <h1 className='text-center text-balance text-3xl md:text-5xl font-medium tracking-tight leading-[1.2] text-white/90'>
-          A residency for ambitious hackers
+          A residency for the world's best hackers
         </h1>
       </BlurFade>
 
       <BlurFade delay={0.25}>
-        <p className='text-center text-white/70 text-lg md:text-xl max-w-md'>
-          Applications now open for batch 1.0 starting in April 2026
-        </p>
+        <div className='text-center'>
+          <p className='text-white/70 text-lg md:text-xl max-w-md'>
+            Applications now open for batch 1.0
+          </p>
+          <p className='text-white font-semibold text-xl md:text-2xl mt-2'>
+            April 21st – May 31st, 2026
+          </p>
+        </div>
       </BlurFade>
 
       <BlurFade delay={0.35}>

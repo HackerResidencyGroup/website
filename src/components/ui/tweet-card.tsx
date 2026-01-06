@@ -8,6 +8,7 @@ type TweetProps = {
   date: string
   content: React.ReactNode
   avatarUrl: string
+  tweetUrl?: string
   verified?: boolean
 }
 
@@ -17,10 +18,16 @@ export function TweetCard({
   date,
   content,
   avatarUrl,
+  tweetUrl,
   verified = true
 }: TweetProps) {
   return (
-    <div className='bg-white rounded-2xl border border-gray-200 p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow'>
+    <a
+      href={tweetUrl}
+      target='_blank'
+      rel='noopener noreferrer'
+      className='block bg-white rounded-2xl border border-gray-200 p-4 md:p-6 shadow-sm hover:shadow-md hover:border-gray-300 transition-all cursor-pointer'
+    >
       <div className='flex items-start gap-3'>
         {/* Avatar */}
         <div className='relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0'>
@@ -52,7 +59,7 @@ export function TweetCard({
           </div>
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 

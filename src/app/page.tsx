@@ -1,5 +1,3 @@
-import { DotBackground } from '@/components/ui/dot-background'
-
 import { CTASection } from './sections/cta-section'
 import { DemoDaySection } from './sections/demo-day-section'
 import { HeroSection } from './sections/hero-section'
@@ -12,14 +10,12 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <DotBackground className='flex flex-col items-center'>
-        <PitchSection />
-        <TeamSection />
-        <VillaSection />
-        <DemoDaySection />
-        <TestimonialsSection />
-        <CTASection />
-      </DotBackground>
+      <PitchSection />
+      <TeamSection />
+      <VillaSection />
+      <DemoDaySection />
+      <TestimonialsSection />
+      <CTASection />
     </>
   )
 }

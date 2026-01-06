@@ -24,7 +24,7 @@ export function PitchSection() {
         ref={ref}
         className='text-center text-balance text-2xl md:text-3xl leading-relaxed max-w-3xl text-foreground'
       >
-        We're inviting 13 ambitious founders to come live and build with us for
+        We're inviting 10 ambitious founders to come live and build with us for
         6 weeks in Southeast Asia.
       </h2>
 

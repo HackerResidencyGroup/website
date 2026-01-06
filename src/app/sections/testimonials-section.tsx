@@ -9,6 +9,7 @@ const tweets = [
     handle: 'josefbuettgen',
     date: 'Dec 1, 2025',
     avatarUrl: '/demo-day/pfp1.png',
+    tweetUrl: 'https://x.com/josefbuettgen/status/1998295947156296099',
     content: (
       <>
         Just finished <TweetMention>@HackerResidency</TweetMention> and honestly
@@ -35,6 +36,7 @@ const tweets = [
     handle: 'alexcooldev',
     date: 'Dec 1, 2025',
     avatarUrl: '/demo-day/pfp4.jpg',
+    tweetUrl: 'https://x.com/alexcooldev/status/1995327556359422268',
     content: (
       <>
         Bye <TweetMention>@HackerResidency</TweetMention>, thanks{' '}
@@ -51,6 +53,7 @@ const tweets = [
     handle: 'brianshinsh',
     date: 'Dec 1, 2025',
     avatarUrl: '/demo-day/pfp2.jpg',
+    tweetUrl: 'https://x.com/brianshinsh/status/1995386416550064298',
     content: (
       <>
         Just arrived back home from Da Nang!
@@ -73,6 +76,7 @@ const tweets = [
     handle: 'phuctm97',
     date: 'Dec 4, 2025',
     avatarUrl: '/people/phuc.jpg',
+    tweetUrl: 'https://x.com/phuctm97/status/1996469415706349858',
     content: (
       <>
         <TweetMention>@Vibingbase</TweetMention> is the project that I had the
