@@ -20,11 +20,7 @@ const people = [
     linkedin: 'https://linkedin.com/in/fisch2',
     description: (
       <>
-        Founder of{' '}
-        <Link href='https://agentic.so' target='_blank' className='link'>
-          Agentic
-        </Link>
-        . 2 exits. Prev{' '}
+        Founder of Agentic. 2 exits. Prev{' '}
         <Link href='https://hf0.com' target='_blank' className='link'>
           HF0
         </Link>
@@ -96,15 +92,7 @@ const people = [
     description: (
       <>
         Built Raya & Kippo and then 120 other apps you&apos;ve never heard of
-        because they failed.{' '}
-        <Link
-          href='https://www.nomadsocial.app'
-          target='_blank'
-          className='link'
-        >
-          Nomad Social
-        </Link>{' '}
-        now live on iOS and Android.
+        because they failed.
       </>
     )
   }

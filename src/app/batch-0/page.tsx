@@ -7,7 +7,7 @@ import { Card } from '@/components/card'
 import { HeroButton } from '@/components/hero-button'
 import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
 import { WorldMap } from '@/components/ui/world-map'
-// import { TallyForm } from './tally-form'
+import { cn } from '@/lib/utils'
 
 const dots: Array<{
   start: { lat: number; lng: number; label?: string }
@@ -107,7 +107,151 @@ export default function Batch0Page() {
         <HeroButton heroVariant='red'>
           <Link href='/'>stack.pop();</Link>
         </HeroButton>
+
+        <SponsorSection />
       </section>
     </>
+  )
+}
+
+function SponsorSection() {
+  return (
+    <section className='relative z-10 flex flex-col gap-12 mb-16 px-4'>
+      <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
+        Sponsors
+      </h2>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 dark:hidden'>
+        <Sponsor
+          href='https://coderabbit.ai?from=hrg'
+          src='/sponsors/coderabbit-light.svg'
+          alt='CodeRabbit'
+        />
+
+        <Sponsor
+          href=' https://openrouter.ai?referral=hrg'
+          src='/sponsors/openrouter-light.svg'
+          alt='OpenRouter'
+        />
+
+        <Sponsor
+          href='https://n8n.io?from=hrg'
+          src='/sponsors/n8n-light.svg'
+          alt='N8N'
+        />
+
+        <Sponsor
+          href='https://www.datahouse.com?from=hrg'
+          src='/sponsors/datahouse-light.png'
+          alt='Datahouse'
+        />
+
+        <Sponsor
+          href='https://parallel.ai?from=hrg'
+          src='/sponsors/parallel-light.svg'
+          alt='Parallel.ai'
+        />
+
+        <Sponsor
+          href='https://stainless.com?from=hrg'
+          src='/sponsors/stainless-light.png'
+          alt='Stainless'
+        />
+
+        <Sponsor
+          href='https://cognition.ai?from=hrg'
+          src='/sponsors/cognition-light.svg'
+          alt='Cognition'
+        />
+
+        <Sponsor
+          href='https://www.createanything.com/?via=HRG'
+          src='/sponsors/anything-light.svg'
+          alt='Anything'
+        />
+
+        <Sponsor
+          href='https://exa.ai?from=hrg'
+          src='/sponsors/exa-light.svg'
+          alt='Exa'
+          className='max-h-16'
+        />
+      </div>
+
+      <div className='grid-cols-1 md:grid-cols-2 items-center max-w-4xl gap-16 hidden dark:grid'>
+        <Sponsor
+          href='https://coderabbit.ai?from=hrg'
+          src='/sponsors/coderabbit-dark.svg'
+          alt='CodeRabbit'
+        />
+
+        <Sponsor
+          href=' https://openrouter.ai?referral=hrg'
+          src='/sponsors/openrouter-dark.svg'
+          alt='OpenRouter'
+        />
+
+        <Sponsor
+          href='https://n8n.io?from=hrg'
+          src='/sponsors/n8n-dark.svg'
+          alt='N8N'
+        />
+
+        <Sponsor
+          href='https://www.datahouse.com?from=hrg'
+          src='/sponsors/datahouse-dark.png'
+          alt='Datahouse'
+        />
+
+        <Sponsor
+          href='https://parallel.ai?from=hrg'
+          src='/sponsors/parallel-dark.svg'
+          alt='Parallel.ai'
+        />
+
+        <Sponsor
+          href='https://stainless.com?from=hrg'
+          src='/sponsors/stainless-dark.png'
+          alt='Stainless'
+        />
+
+        <Sponsor
+          href='https://cognition.ai?from=hrg'
+          src='/sponsors/cognition-dark.png'
+          alt='Cognition'
+        />
+
+        <Sponsor
+          href='https://www.createanything.com/?via=HRG'
+          src='/sponsors/anything-dark.svg'
+          alt='Anything'
+        />
+
+        <Sponsor
+          href='https://exa.ai?from=hrg'
+          src='/sponsors/exa-dark.svg'
+          alt='Exa'
+          className='max-h-16'
+        />
+      </div>
+    </section>
+  )
+}
+
+function Sponsor({
+  href,
+  src,
+  alt,
+  className
+}: {
+  href: string
+  src: string
+  alt: string
+  className?: string
+}) {
+  return (
+    <Link href={href} target='_blank'>
+      <img src={src} alt={alt} className={cn('w-full max-h-24', className)} />
+    </Link>
   )
 }
