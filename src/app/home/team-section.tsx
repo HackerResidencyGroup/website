@@ -20,7 +20,15 @@ const people = [
     linkedin: 'https://linkedin.com/in/fisch2',
     description: (
       <>
-        Founder of Agentic. 2 exits. Prev{' '}
+        Founder of{' '}
+        <Link
+          href='https://github.com/transitive-bullshit/agentic'
+          target='_blank'
+          className='link'
+        >
+          Agentic
+        </Link>
+        . 2 exits. Prev{' '}
         <Link href='https://hf0.com' target='_blank' className='link'>
           HF0
         </Link>
@@ -62,23 +70,7 @@ const people = [
         <Link href='https://vibingbase.com' target='_blank' className='link'>
           vibingbase.com
         </Link>
-        ,{' '}
-        <Link href='https://pdfvector.com' target='_blank' className='link'>
-          pdfvector.com
-        </Link>
-        ,{' '}
-        <Link href='https://filefaker.com' target='_blank' className='link'>
-          filefaker.com
-        </Link>
-        ,{' '}
-        <Link href='https://sparknamer.com' target='_blank' className='link'>
-          sparknamer.com
-        </Link>
-        ,{' '}
-        <Link href='https://hey-menu.com' target='_blank' className='link'>
-          hey-menu.com
-        </Link>
-        , and a secret startup 🤫.
+        .
       </>
     )
   },

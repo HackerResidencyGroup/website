@@ -60,12 +60,25 @@ export function CTASection() {
             scale: { type: 'tween', visualDuration: 0.15 }
           }}
         >
-          Applications are now open for the April 2026 batch. Applications will
-          be reviewed on a rolling basis, so apply now to secure your spot!
+          Apply to come build with us! Applications will be reviewed on a
+          rolling basis, so apply now to secure your spot.
         </motion.h3>
 
-        <HeroButton heroVariant='red'>
-          <Link href='/apply'>Apply now</Link>
+        <motion.p
+          className='text-center text-pretty text-md leading-normal italic'
+          initial={{ opacity: 0, scale: 0, translateY: -20 }}
+          whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
+          transition={{
+            delay: 0.15,
+            duration: 0.15,
+            scale: { type: 'tween', visualDuration: 0.15 }
+          }}
+        >
+          April 21st – June 1st, 2026
+        </motion.p>
+
+        <HeroButton heroVariant='orange'>
+          <Link href='/apply'>Apply Now</Link>
         </HeroButton>
       </section>
     </>

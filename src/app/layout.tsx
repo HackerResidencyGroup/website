@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={`${geist.variable} antialiased`}>
+      <body className={`${geist.variable} dark antialiased`}>
         <Providers>
           <div className='relative w-full min-h-screen flex flex-col items-center'>
             <Header />

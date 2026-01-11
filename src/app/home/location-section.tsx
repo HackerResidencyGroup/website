@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { useRef } from 'react'
 
 import { Globe } from '@/components/globe'
@@ -19,23 +18,12 @@ export function LocationSection() {
 
       <h3
         ref={ref}
-        className='text-center text-pretty text-2xl leading-normal max-w-3xl'
+        className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
-        Da Nang, Vietnam is a beautiful city right on the beach that's super
-        accessible and relatively cheap. We chose it for our first batch because{' '}
-        <Link href='https://x.com/tdinh_me' target='_blank' className='link'>
-          Tony
-        </Link>{' '}
-        and{' '}
-        <Link
-          href='https://x.com/dayonefoundry'
-          target='_blank'
-          className='link'
-        >
-          David
-        </Link>{' '}
-        both happen to live there. 😉 But it's also legitimately one of the best
-        cities in the world for digital nomads.
+        <p>
+          Da Nang, Vietnam is a beautiful city right on the beach that's super
+          accessible and relatively cheap.
+        </p>
       </h3>
 
       <Globe />

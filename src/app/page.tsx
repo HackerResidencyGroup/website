@@ -52,13 +52,15 @@ function StorySectionIntro() {
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
         <p>
-          We're inviting 10 ambitious founders to come live and build with us
-          for an entire month at a dope villa in SE Asia.
+          We're inviting 10 ambitious founders to come live and build with us at
+          a dope villa in SE Asia.
         </p>
+
+        <p>6 months of progress in 6 weeks!</p>
 
         <p>
           April 21<span className='text-sm align-super'>st</span> – June 1
-          <span className='text-sm align-super'>st</span>, 2026.
+          <span className='text-sm align-super'>st</span>, 2026
         </p>
       </h3>
     </section>
@@ -81,7 +83,6 @@ function StorySectionWhat() {
       >
         <p>
           A stunning 12-bedroom villa with pool, workspace, and ocean views.
-          Located right on the beach and 15 minutes from the city center.
         </p>
 
         <p>Fully equipped for focused work.</p>
@@ -111,7 +112,7 @@ function StorySectionPricing() {
         ref={ref}
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
-        <p>We don't take any equity or revenue share.</p>
+        <p>We don't take any equity or rev share.</p>
 
         <p>You only need to pay for your flights.</p>
 
@@ -121,7 +122,8 @@ function StorySectionPricing() {
         </p>
 
         <p>
-          Top teams will receive up to $100k in funding at the end of the batch.
+          And at the end of the batch, we optionally invest up to $100k in
+          funding for the top teams.
         </p>
       </h3>
     </section>

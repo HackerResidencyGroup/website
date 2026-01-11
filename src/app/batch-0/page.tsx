@@ -5,7 +5,7 @@ import random from 'random'
 
 import { Card } from '@/components/card'
 import { HeroButton } from '@/components/hero-button'
-import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
+import { AnimatedGradientBackground } from '@/components/ui/animated-gradient-background'
 import { WorldMap } from '@/components/ui/world-map'
 import { cn } from '@/lib/utils'
 
@@ -83,7 +83,7 @@ const dots: Array<{
 export default function Batch0Page() {
   return (
     <>
-      <RaycastAnimatedBackground />
+      <AnimatedGradientBackground />
 
       <section className='relative z-10 w-full flex flex-col gap-8 max-w-3xl flex-1 justify-center '>
         <h2 className='text-center text-balance font-semibold text-3xl font-heading'>

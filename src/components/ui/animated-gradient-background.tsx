@@ -1,9 +1,9 @@
 'use client'
 
-import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 import { UnicornScene } from 'unicornstudio-react/next'
 
+import { useTheme } from '@/app/hooks/use-theme'
 import { cn } from '@/lib/utils'
 
 export const useWindowSize = () => {

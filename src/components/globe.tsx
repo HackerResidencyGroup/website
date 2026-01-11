@@ -1,10 +1,10 @@
 'use client'
 
 import createGlobe from 'cobe'
-import { useTheme } from 'next-themes'
 import { useEffect, useRef } from 'react'
 import { useSpring } from 'react-spring'
 
+import { useTheme } from '@/app/hooks/use-theme'
 import { cn } from '@/lib/utils'
 
 export function Globe({ className }: { className?: string }) {
@@ -48,13 +48,15 @@ export function Globe({ className }: { className?: string }) {
       height: width * devicePixelRatio,
       phi,
       theta: 0.3,
-      dark: isDarkMode ? 0 : 1,
+      // dark: isDarkMode ? 0 : 1,
+      dark: 0,
       diffuse: 3,
       mapSamples: 16_000,
       mapBrightness: 1.2,
       baseColor: [1, 1, 1],
       markerColor: [251 / 255, 100 / 255, 21 / 255],
-      glowColor: isDarkMode ? [1.2, 1.2, 1.2] : [0.2, 0.2, 0.2],
+      // glowColor: isDarkMode ? [1.2, 1.2, 1.2] : [0.2, 0.2, 0.2],
+      glowColor: [1, 1, 1],
       markers: [{ location: [16.0545, 108.0717], size: 0.1 }],
       onRender: (state) => {
         // This prevents rotation while dragging
