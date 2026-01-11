@@ -147,7 +147,7 @@ export function HeroSection() {
           </motion.div>
 
           <div className='hidden md:block relative w-[20em] h-[20em]'>
-            <div className='aspect-[1280/853]' />
+            <div className='aspect-1280/853' />
 
             <div
               ref={wrapperRef}

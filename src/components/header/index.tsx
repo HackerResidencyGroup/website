@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { ActiveLink } from '@/components/active-link'
-// import { DarkModeToggle } from '@/components/dark-mode-toggle'
+import { DarkModeToggle } from '@/components/dark-mode-toggle'
 import { Button } from '@/components/ui/button'
 import {
   Tooltip,
@@ -50,7 +50,7 @@ export function Header() {
           </ActiveLink>
 
           <div className='flex flex-row justify-end items-center h-full gap-4'>
-            {/* <DarkModeToggle /> */}
+            <DarkModeToggle />
 
             <Button variant='outline' size='icon' asChild>
               <Link href={githubUrl} target='_blank' rel='noopener noreferrer'>

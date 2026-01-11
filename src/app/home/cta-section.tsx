@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { HeroButton } from '@/components/hero-button'
 // import { twitterUrl } from '@/lib/config'
 
-export default function CTASection() {
+export function CTASection() {
   return (
     <>
       {/* CTA section */}
@@ -34,7 +34,7 @@ export default function CTASection() {
           </Link>
         </HeroButton> */}
 
-        <motion.h3
+        {/* <motion.h3
           className='text-center text-balance text-2xl leading-normal max-w-3xl'
           initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
           whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
@@ -49,6 +49,23 @@ export default function CTASection() {
 
         <HeroButton heroVariant='red'>
           <Link href='/apply'>Get notified for the next batch</Link>
+        </HeroButton> */}
+
+        <motion.h3
+          className='text-center text-balance text-2xl leading-normal max-w-3xl'
+          initial={{ opacity: 0.5, scale: 0, translateY: -30 }}
+          whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
+          transition={{
+            duration: 0.15,
+            scale: { type: 'tween', visualDuration: 0.15 }
+          }}
+        >
+          Applications are now open for the April 2026 batch. Applications will
+          be reviewed on a rolling basis, so apply now to secure your spot!
+        </motion.h3>
+
+        <HeroButton heroVariant='red'>
+          <Link href='/apply'>Apply now</Link>
         </HeroButton>
       </section>
     </>

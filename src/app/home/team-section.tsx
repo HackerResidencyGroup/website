@@ -59,8 +59,8 @@ const people = [
     description: (
       <>
         Built 8 startups in 12 months • Sold 3/8 startups • Building{' '}
-        <Link href='https://modelfetch.com' target='_blank' className='link'>
-          modelfetch.com
+        <Link href='https://vibingbase.com' target='_blank' className='link'>
+          vibingbase.com
         </Link>
         ,{' '}
         <Link href='https://pdfvector.com' target='_blank' className='link'>
