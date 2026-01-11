@@ -52,14 +52,12 @@ function StorySectionIntro() {
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
         <p>
-          We're inviting 10 ambitious founders to come live and build with us at
-          a dope villa in SE Asia.
+          We're inviting 10 ambitious founders to come live and build with us
+          for 6 weeks at a dope villa in SE Asia.
         </p>
 
-        <p>6 months of progress in 6 weeks!</p>
-
         <p>
-          April 21<span className='text-sm align-super'>st</span> – June 1
+          April 21<span className='text-sm align-super'>st</span> – May 31
           <span className='text-sm align-super'>st</span>, 2026
         </p>
       </h3>
