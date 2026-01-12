@@ -19,7 +19,8 @@ export function Card({
       <div className='grid grid-cols-1 rounded-[2rem] p-2 shadow-md shadow-black/5'>
         <div
           className={cn(
-            'rounded-3xl bg-card shadow-2xl ring-1 ring-black/5 color-card-foreground',
+            // bg-card
+            'rounded-3xl bg-gray-800 shadow-2xl ring-1 ring-black/5 color-card-foreground',
             innerClassName
           )}
         >

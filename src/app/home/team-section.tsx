@@ -153,7 +153,7 @@ export function TeamSection() {
                 )}
               </div>
 
-              <p className='text-center text-pretty text-sm leading-normal'>
+              <p className='text-center text-balance text-sm leading-normal'>
                 {person.description}
               </p>
             </div>

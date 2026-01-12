@@ -120,8 +120,9 @@ function StorySectionPricing() {
         </p>
 
         <p>
-          And at the end of the batch, we optionally invest up to $100k in
-          funding for the top teams.
+          At the end of the batch, we offer{' '}
+          <span className='font-semibold'>up to $250k in funding</span> for the
+          top teams.
         </p>
       </h3>
     </section>

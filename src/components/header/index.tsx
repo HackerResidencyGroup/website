@@ -17,7 +17,7 @@ import styles from './styles.module.css'
 
 export function Header() {
   return (
-    <header className={cn(styles.header, 'shadow-sm')}>
+    <header className={cn(styles.header, 'shadow-sm', 'border-b')}>
       <div className={styles.headerContent}>
         <Tooltip>
           <TooltipTrigger>
