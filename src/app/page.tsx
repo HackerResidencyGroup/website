@@ -80,7 +80,7 @@ function StorySectionWhat() {
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
         <p>
-          A stunning 12-bedroom villa with pool, workspace, and ocean views.
+          A stunning 14-bedroom villa with pool, workspace, and ocean views.
         </p>
 
         <p>Fully equipped for focused work.</p>
