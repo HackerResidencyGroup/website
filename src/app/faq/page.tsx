@@ -1,5 +1,5 @@
 import { NotionBlock } from '@/components/notion-block'
-import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
+import { AnimatedGradientBackground } from '@/components/ui/animated-gradient-background'
 import { notion } from '@/lib/notion'
 
 // cache the notion content for up to 10 minutes
@@ -12,7 +12,7 @@ export default async function FAQPage() {
 
   return (
     <>
-      <RaycastAnimatedBackground className='opacity-50' />
+      <AnimatedGradientBackground className='opacity-50' />
 
       <div className='relative z-10 flex flex-col gap-8 max-w-full'>
         <h2 className='text-center text-balance font-semibold text-3xl font-heading'>

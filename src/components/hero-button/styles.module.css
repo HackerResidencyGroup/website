@@ -63,7 +63,8 @@
 .heroButton {
   cursor: pointer;
 
-  background-color: var(--background);
+  /* background-color: var(--background); */
+  background-color: var(--color-gray-800);
   background-clip: padding-box;
   border: 1px solid transparent;
   box-shadow: 0 4px 4px 0 #00000010;
@@ -90,7 +91,8 @@
 }
 
 :global(.dark) .heroButton {
-  --lighten-color: rgba(0, 0, 0, 0.75);
+  /* --lighten-color: rgba(0, 0, 0, 0.75); */
+  --lighten-color: var(--color-gray-800);
 }
 
 .heroButton:hover {

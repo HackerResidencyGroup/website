@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
 import { ActiveLink } from '@/components/active-link'
+// import { DarkModeToggle } from '@/components/dark-mode-toggle'
 import { Button } from '@/components/ui/button'
 import { GitHubIcon } from '@/icons/github'
 import { TwitterIcon } from '@/icons/twitter'
 import { githubUrl, twitterUrl } from '@/lib/config'
 import { cn } from '@/lib/utils'
 
-// import { DarkModeToggle } from '../dark-mode-toggle'
 import styles from './styles.module.css'
 
 export function Footer() {

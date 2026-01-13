@@ -1,28 +1,26 @@
 'use client'
 
 import Image, { type StaticImageData } from 'next/image'
-import Link from 'next/link'
 import { useRef } from 'react'
 import { PhotoView } from 'react-photo-view'
 
 import { Card } from '@/components/card'
-import { RaycastAnimatedBackground } from '@/components/ui/raycast-animated-background'
-import { cn } from '@/lib/utils'
-import Villa0 from '@/public/da-nang-villa/0.jpg'
-import Villa1 from '@/public/da-nang-villa/1.jpg'
-import Villa2 from '@/public/da-nang-villa/4.jpg'
-import Villa3 from '@/public/da-nang-villa/8.jpg'
+import { AnimatedGradientBackground } from '@/components/ui/animated-gradient-background'
+import Villa0 from '@/public/da-nang-villa-legos/0.jpg'
+import Villa1 from '@/public/da-nang-villa-legos/1.jpg'
+import Villa2 from '@/public/da-nang-villa-legos/6.jpg'
+import Villa3 from '@/public/da-nang-villa-legos/7.jpg'
 
-import { useAnimatedStoryText } from './animated-story-text'
-import CTASection from './cta-section'
-import { HeroSection } from './hero-section'
-import { LocationSection } from './location-section'
-import { TeamSection } from './team-section'
+import { useAnimatedStoryText } from './home/animated-story-text'
+import { CTASection } from './home/cta-section'
+import { HeroSection } from './home/hero-section'
+import { LocationSection } from './home/location-section'
+import { TeamSection } from './home/team-section'
 
 export default function TheBestDamnLandingPageEver() {
   return (
     <>
-      <RaycastAnimatedBackground />
+      <AnimatedGradientBackground />
 
       <HeroSection />
 
@@ -37,8 +35,6 @@ export default function TheBestDamnLandingPageEver() {
       <StorySectionWhy />
 
       <LocationSection />
-
-      <SponsorSection />
 
       <CTASection />
     </>
@@ -57,15 +53,13 @@ function StorySectionIntro() {
       >
         <p>
           We're inviting 10 ambitious founders to come live and build with us
-          for an entire month at a dope villa in SE Asia.
+          for 6 weeks at a dope villa in SE Asia.
         </p>
 
-        <p>Next batch coming soon in 2026...</p>
-
-        {/* <p>
-          November 1<span className='text-sm align-super'>st</span> – 30
-          <span className='text-sm align-super'>th</span>, 2025.
-        </p> */}
+        <p>
+          April 21<span className='text-sm align-super'>st</span> – May 31
+          <span className='text-sm align-super'>st</span>, 2026
+        </p>
       </h3>
     </section>
   )
@@ -86,8 +80,7 @@ function StorySectionWhat() {
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
         <p>
-          A stunning 10-bedroom villa with pool, workspace, and ocean views.
-          Located 5 minutes from the beach and 15 minutes from the city center.
+          A stunning 14-bedroom villa with pool, workspace, and ocean views.
         </p>
 
         <p>Fully equipped for focused work.</p>
@@ -117,13 +110,19 @@ function StorySectionPricing() {
         ref={ref}
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
-        <p>We don't take any equity or revenue share.</p>
+        <p>We don't take any equity or rev share.</p>
 
         <p>You only need to pay for your flights.</p>
 
         <p>
           We cover the villa, food, laundry, a professional videographer, and
           even your very own personal assistant for the month.
+        </p>
+
+        <p>
+          At the end of the batch, we offer{' '}
+          <span className='font-semibold'>up to $250k in funding</span> for the
+          top teams.
         </p>
       </h3>
     </section>
@@ -158,148 +157,6 @@ function StorySectionWhy() {
         </div>
       </h3>
     </section>
-  )
-}
-
-function SponsorSection() {
-  return (
-    <section className='relative z-10 flex flex-col gap-12 mb-16 px-4'>
-      <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
-        Sponsors
-      </h2>
-
-      <div className='grid grid-cols-1 md:grid-cols-2 max-w-4xl gap-16 dark:hidden'>
-        <Sponsor
-          href='https://coderabbit.ai?from=hrg'
-          src='/sponsors/coderabbit-light.svg'
-          alt='CodeRabbit'
-        />
-
-        <Sponsor
-          href=' https://openrouter.ai?referral=hrg'
-          src='/sponsors/openrouter-light.svg'
-          alt='OpenRouter'
-        />
-
-        <Sponsor
-          href='https://n8n.io?from=hrg'
-          src='/sponsors/n8n-light.svg'
-          alt='N8N'
-        />
-
-        <Sponsor
-          href='https://www.datahouse.com?from=hrg'
-          src='/sponsors/datahouse-light.png'
-          alt='Datahouse'
-        />
-
-        <Sponsor
-          href='https://parallel.ai?from=hrg'
-          src='/sponsors/parallel-light.svg'
-          alt='Parallel.ai'
-        />
-
-        <Sponsor
-          href='https://stainless.com?from=hrg'
-          src='/sponsors/stainless-light.png'
-          alt='Stainless'
-        />
-
-        <Sponsor
-          href='https://cognition.ai?from=hrg'
-          src='/sponsors/cognition-light.svg'
-          alt='Cognition'
-        />
-
-        <Sponsor
-          href='https://www.createanything.com/?via=HRG'
-          src='/sponsors/anything-light.svg'
-          alt='Anything'
-        />
-
-        <Sponsor
-          href='https://exa.ai?from=hrg'
-          src='/sponsors/exa-light.svg'
-          alt='Exa'
-          className='max-h-16'
-        />
-      </div>
-
-      <div className='grid-cols-1 md:grid-cols-2 items-center max-w-4xl gap-16 hidden dark:grid'>
-        <Sponsor
-          href='https://coderabbit.ai?from=hrg'
-          src='/sponsors/coderabbit-dark.svg'
-          alt='CodeRabbit'
-        />
-
-        <Sponsor
-          href=' https://openrouter.ai?referral=hrg'
-          src='/sponsors/openrouter-dark.svg'
-          alt='OpenRouter'
-        />
-
-        <Sponsor
-          href='https://n8n.io?from=hrg'
-          src='/sponsors/n8n-dark.svg'
-          alt='N8N'
-        />
-
-        <Sponsor
-          href='https://www.datahouse.com?from=hrg'
-          src='/sponsors/datahouse-dark.png'
-          alt='Datahouse'
-        />
-
-        <Sponsor
-          href='https://parallel.ai?from=hrg'
-          src='/sponsors/parallel-dark.svg'
-          alt='Parallel.ai'
-        />
-
-        <Sponsor
-          href='https://stainless.com?from=hrg'
-          src='/sponsors/stainless-dark.png'
-          alt='Stainless'
-        />
-
-        <Sponsor
-          href='https://cognition.ai?from=hrg'
-          src='/sponsors/cognition-dark.png'
-          alt='Cognition'
-        />
-
-        <Sponsor
-          href='https://www.createanything.com/?via=HRG'
-          src='/sponsors/anything-dark.svg'
-          alt='Anything'
-        />
-
-        <Sponsor
-          href='https://exa.ai?from=hrg'
-          src='/sponsors/exa-dark.svg'
-          alt='Exa'
-          className='max-h-16'
-        />
-      </div>
-    </section>
-  )
-}
-
-function Sponsor({
-  href,
-  src,
-  alt,
-  className
-}: {
-  href: string
-  src: string
-  alt: string
-  className?: string
-}) {
-  return (
-    <Link href={href} target='_blank'>
-      <img src={src} alt={alt} className={cn('w-full max-h-24', className)} />
-    </Link>
   )
 }
 

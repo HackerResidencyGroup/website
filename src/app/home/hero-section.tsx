@@ -120,7 +120,7 @@ export function HeroSection() {
               scale: { type: 'tween', visualDuration: 0.4 }
             }}
           >
-            Next batch coming soon in 2026...
+            April 21st – June 1st, 2026
           </motion.p>
 
           <motion.div
@@ -147,7 +147,7 @@ export function HeroSection() {
           </motion.div>
 
           <div className='hidden md:block relative w-[20em] h-[20em]'>
-            <div className='aspect-[1280/853]' />
+            <div className='aspect-1280/853' />
 
             <div
               ref={wrapperRef}

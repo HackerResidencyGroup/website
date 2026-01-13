@@ -18,7 +18,7 @@ See the [site](https://hackerresidencygroup.com) for details, and [follow our jo
 ## Cohorts
 
 - [Batch 0](https://www.hackerresidencygroup.com/batch-0) - November 2025 in Da Nang, Vietnam
-- Batch 1 – April 21 – May 31, 2026 in Da Nang, Vietnam
+- Batch 1 – April 21 – June 1, 2026 in Da Nang, Vietnam
 
 ## License
 

@@ -3,10 +3,10 @@
 import type { ExtendedRecordMap } from 'notion-types'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 import { NotionRenderer } from 'react-notion-x'
 
+import { useTheme } from '@/app/hooks/use-theme'
 import * as config from '@/lib/config'
 
 export function NotionBlock({

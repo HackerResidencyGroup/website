@@ -21,7 +21,11 @@ const people = [
     description: (
       <>
         Founder of{' '}
-        <Link href='https://agentic.so' target='_blank' className='link'>
+        <Link
+          href='https://github.com/transitive-bullshit/agentic'
+          target='_blank'
+          className='link'
+        >
           Agentic
         </Link>
         . 2 exits. Prev{' '}
@@ -63,26 +67,10 @@ const people = [
     description: (
       <>
         Built 8 startups in 12 months • Sold 3/8 startups • Building{' '}
-        <Link href='https://modelfetch.com' target='_blank' className='link'>
-          modelfetch.com
+        <Link href='https://vibingbase.com' target='_blank' className='link'>
+          vibingbase.com
         </Link>
-        ,{' '}
-        <Link href='https://pdfvector.com' target='_blank' className='link'>
-          pdfvector.com
-        </Link>
-        ,{' '}
-        <Link href='https://filefaker.com' target='_blank' className='link'>
-          filefaker.com
-        </Link>
-        ,{' '}
-        <Link href='https://sparknamer.com' target='_blank' className='link'>
-          sparknamer.com
-        </Link>
-        ,{' '}
-        <Link href='https://hey-menu.com' target='_blank' className='link'>
-          hey-menu.com
-        </Link>
-        , and a secret startup 🤫.
+        .
       </>
     )
   },
@@ -96,15 +84,7 @@ const people = [
     description: (
       <>
         Built Raya & Kippo and then 120 other apps you&apos;ve never heard of
-        because they failed.{' '}
-        <Link
-          href='https://www.nomadsocial.app'
-          target='_blank'
-          className='link'
-        >
-          Nomad Social
-        </Link>{' '}
-        now live on iOS and Android.
+        because they failed.
       </>
     )
   }
@@ -173,7 +153,7 @@ export function TeamSection() {
                 )}
               </div>
 
-              <p className='text-center text-pretty text-sm leading-normal'>
+              <p className='text-center text-balance text-sm leading-normal'>
                 {person.description}
               </p>
             </div>

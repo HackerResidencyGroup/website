@@ -7,8 +7,6 @@
   width: 100%;
   max-width: 100vw;
   overflow: hidden;
-  height: 55px;
-  min-height: 55px;
 
   background: hsla(0, 0%, 100%, 0.8);
   backdrop-filter: saturate(180%) blur(16px);
@@ -16,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px 12px 0;
+  padding: 12px;
   line-height: 1;
 }
 
