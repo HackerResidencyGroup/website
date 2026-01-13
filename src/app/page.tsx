@@ -115,13 +115,13 @@ function StorySectionPricing() {
         <p>You only need to pay for your flights.</p>
 
         <p>
-          We cover the villa, food, laundry, a professional videographer, and
-          even your very own personal assistant for the month.
+          We cover the villa, food, laundry, workstation, a professional
+          videographer, and even your very own personal assistant for the month.
         </p>
 
         <p>
           At the end of the batch, we offer{' '}
-          <span className='font-semibold'>up to $250k in funding</span> for the
+          <span className='font-semibold'>up to $100k in funding</span> for the
           top teams.
         </p>
       </h3>
