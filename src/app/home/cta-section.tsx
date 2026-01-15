@@ -60,11 +60,11 @@ export function CTASection() {
             scale: { type: 'tween', visualDuration: 0.15 }
           }}
         >
-          Apply to come build with us!
+          Apply to come live & build with us for 6 weeks!
         </motion.h3>
 
         <motion.p
-          className='text-center text-pretty text-md leading-normal italic'
+          className='text-center text-pretty text-base leading-normal italic'
           initial={{ opacity: 0, scale: 0, translateY: -20 }}
           whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
           transition={{

@@ -34,6 +34,8 @@ export default function TheBestDamnLandingPageEver() {
 
       <StorySectionWhy />
 
+      <StorySectionFunding />
+
       <LocationSection />
 
       <CTASection />
@@ -56,10 +58,7 @@ function StorySectionIntro() {
           for 6 weeks at a dope villa in SE Asia.
         </p>
 
-        <p>
-          April 21<span className='text-sm align-super'>st</span> – June 1
-          <span className='text-sm align-super'>st</span>, 2026
-        </p>
+        <p>With one goal: to lock in and build!</p>
       </h3>
     </section>
   )
@@ -103,7 +102,7 @@ function StorySectionPricing() {
   return (
     <section className='relative z-10 flex flex-col gap-12 mb-16'>
       <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
-        And the best part is it's 100% free
+        And the best part: it's 100% free
       </h2>
 
       <h3
@@ -115,14 +114,9 @@ function StorySectionPricing() {
         <p>You only need to pay for your flights.</p>
 
         <p>
-          We cover the villa, food, laundry, workstation, a professional
-          videographer, and even your very own personal assistant for the month.
-        </p>
-
-        <p>
-          At the end of the batch, we offer{' '}
-          <span className='font-semibold'>up to $100k in funding</span> for the
-          top teams.
+          We cover the villa, food, laundry, your own private bedroom + bathroom
+          + workstation, a professional videographer, and we even have some
+          surprises in store as well...
         </p>
       </h3>
     </section>
@@ -143,7 +137,7 @@ function StorySectionWhy() {
         ref={ref}
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-6'
       >
-        <p>We're doing this as an experiment with a few goals in mind:</p>
+        <p>HRG started as an experiment with a few goals in mind:</p>
 
         <div className='flex flex-col gap-4'>
           <p>1. Shine an spotlight on the indie hacker lifestyle 🔥</p>
@@ -155,6 +149,37 @@ function StorySectionWhy() {
 
           <p>3. Make friends, vibe, and learn from each other! 🤙</p>
         </div>
+      </h3>
+    </section>
+  )
+}
+
+function StorySectionFunding() {
+  const ref = useRef<HTMLHeadingElement | null>(null)
+  useAnimatedStoryText(ref)
+
+  return (
+    <section className='relative flex flex-col gap-12 mb-16'>
+      <h2 className='text-center text-balance text-4xl font-semibold leading-normal max-w-3xl'>
+        Demo day + up to $100k in funding 🔥
+      </h2>
+
+      <h3
+        ref={ref}
+        className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-6'
+      >
+        <p>
+          We cap the batch off with a{' '}
+          <span className='font-semibold'>demo day</span> +{' '}
+          <span className='font-semibold'>livestream</span> including some of
+          the best investors from around the world.
+        </p>
+
+        <p>
+          And for the first time ever, we'll be directly offering{' '}
+          <span className='font-semibold'>up to $100k in funding</span> to the
+          top teams.
+        </p>
       </h3>
     </section>
   )

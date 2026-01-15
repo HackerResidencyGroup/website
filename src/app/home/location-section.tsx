@@ -21,8 +21,18 @@ export function LocationSection() {
         className='text-center text-balance text-2xl leading-normal max-w-3xl flex flex-col gap-4'
       >
         <p>
-          Da Nang, Vietnam is a beautiful city right on the beach that's super
-          accessible and relatively cheap.
+          Da Nang, Vietnam is legitimately one of the best digital nomad cities
+          in the world.
+        </p>
+
+        <p>
+          Beautiful beaches, delicious food, perfect weather, and a vibrant
+          local culture.
+        </p>
+
+        <p>
+          It's the perfect place to lock in and make 6 months of progress on
+          your startup in 6 weeks!
         </p>
       </h3>
 
