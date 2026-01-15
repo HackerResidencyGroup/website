@@ -57,7 +57,7 @@ function StorySectionIntro() {
         </p>
 
         <p>
-          April 21<span className='text-sm align-super'>st</span> – May 31
+          April 21<span className='text-sm align-super'>st</span> – June 1
           <span className='text-sm align-super'>st</span>, 2026
         </p>
       </h3>
