@@ -60,8 +60,7 @@ export function CTASection() {
             scale: { type: 'tween', visualDuration: 0.15 }
           }}
         >
-          Apply to come build with us! Applications will be reviewed on a
-          rolling basis, so apply now to secure your spot.
+          Apply to come build with us!
         </motion.h3>
 
         <motion.p
