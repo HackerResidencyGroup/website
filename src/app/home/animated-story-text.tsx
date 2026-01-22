@@ -3,11 +3,11 @@
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { SplitText } from 'gsap/SplitText'
 import { useInView } from 'motion/react'
 import { type RefObject, useRef } from 'react'
+import SplitType from 'split-type'
 
-gsap.registerPlugin(ScrollTrigger, SplitText)
+gsap.registerPlugin(ScrollTrigger)
 
 export function useAnimatedStoryText(
   ref: RefObject<HTMLHeadingElement | null>,
@@ -23,8 +23,8 @@ export function useAnimatedStoryText(
     staggerValue?: number
   } = {}
 ) {
-  const splitRef = useRef<any | null>(null)
-  const ctxRef = useRef<any | null>(null)
+  const splitRef = useRef<SplitType | null>(null)
+  const ctxRef = useRef<gsap.Context | null>(null)
   const isInView = useInView(ref)
 
   // There was a weird bug on mobile where the scroll trigger offsets would
@@ -34,8 +34,10 @@ export function useAnimatedStoryText(
     () => {
       if (!ref.current) return
 
-      function refreshAnimation(splitText: SplitText) {
+      function refreshAnimation(chars: HTMLElement[] | null) {
         ctxRef.current?.revert()
+
+        if (!chars || chars.length === 0) return
 
         const ctx = gsap.context(() => {
           const tl = gsap.timeline({
@@ -47,7 +49,7 @@ export function useAnimatedStoryText(
             }
           })
 
-          tl.from(splitText.chars, {
+          tl.from(chars, {
             autoAlpha: fadedValue,
             stagger: staggerValue,
             ease: 'linear'
@@ -58,17 +60,17 @@ export function useAnimatedStoryText(
         return ctx
       }
 
+      // Clean up previous split if exists
       if (splitRef.current) {
-        refreshAnimation(splitRef.current)
-      } else {
-        splitRef.current = new SplitText(ref.current, {
-          type: 'words, chars',
-          autoSplit: true,
-          onSplit(self) {
-            refreshAnimation(self)
-          }
-        })
+        splitRef.current.revert()
       }
+
+      // Create new split
+      splitRef.current = new SplitType(ref.current, {
+        types: 'words,chars'
+      })
+
+      refreshAnimation(splitRef.current.chars)
 
       return () => {
         ctxRef.current?.revert()
