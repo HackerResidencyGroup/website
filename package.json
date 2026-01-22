@@ -57,6 +57,7 @@
     "react-spring": "^10.0.3",
     "react-use": "^17.6.0",
     "sonner": "^2.0.7",
+    "split-type": "^0.3.4",
     "tailwind-merge": "^3.4.0",
     "three": "^0.182.0",
     "type-fest": "^5.3.1",

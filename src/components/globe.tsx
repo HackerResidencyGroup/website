@@ -1,7 +1,7 @@
 'use client'
 
 import createGlobe from 'cobe'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useSpring } from 'react-spring'
 
 import { useTheme } from '@/app/hooks/use-theme'
@@ -11,8 +11,10 @@ export function Globe({ className }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const pointerInteracting = useRef<number | null>(null)
   const pointerInteractionMovement = useRef(0)
+  const globeRef = useRef<ReturnType<typeof createGlobe> | null>(null)
   const { resolvedTheme } = useTheme()
   const isDarkMode = resolvedTheme === 'dark'
+  const [isMounted, setIsMounted] = useState(false)
 
   const [{ r }, api] = useSpring(() => ({
     r: 0,
@@ -24,66 +26,97 @@ export function Globe({ className }: { className?: string }) {
     }
   }))
 
+  // Set mounted state after initial render
   useEffect(() => {
-    if (!canvasRef.current) {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    // Don't run on server or before mount
+    if (globalThis.window === undefined || !isMounted) {
       return
     }
 
-    const devicePixelRatio = window.devicePixelRatio
-    const phi = 2.8
-    let width = 0
+    const canvas = canvasRef.current
+    if (!canvas) {
+      return
+    }
+
+    // Use requestAnimationFrame to ensure canvas is fully rendered
+    const initGlobe = () => {
+      const width = canvas.offsetWidth
+
+      // Don't create globe if canvas has no size yet
+      if (width === 0) {
+        // Retry on next frame
+        requestAnimationFrame(initGlobe)
+        return
+      }
+
+      // Check if canvas can create a WebGL context
+      const gl =
+        canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
+      if (!gl) {
+        console.warn('WebGL not supported, globe will not be rendered')
+        return
+      }
+
+      const devicePixelRatio = window.devicePixelRatio || 1
+      const phi = 2.8
+
+      try {
+        globeRef.current = createGlobe(canvas, {
+          devicePixelRatio,
+          width: width * devicePixelRatio,
+          height: width * devicePixelRatio,
+          phi,
+          theta: 0.3,
+          dark: 0,
+          diffuse: 3,
+          mapSamples: 16_000,
+          mapBrightness: 1.2,
+          baseColor: [1, 1, 1],
+          markerColor: [251 / 255, 100 / 255, 21 / 255],
+          glowColor: [1, 1, 1],
+          markers: [{ location: [16.0545, 108.0717], size: 0.1 }],
+          onRender: (state) => {
+            state.phi = phi + r.get()
+            state.width = canvas.offsetWidth * devicePixelRatio
+            state.height = canvas.offsetWidth * devicePixelRatio
+          }
+        })
+
+        // Fade in the canvas
+        setTimeout(() => {
+          if (canvas) {
+            canvas.style.opacity = '1'
+          }
+        }, 100)
+      } catch (err) {
+        console.warn('Failed to create globe:', err)
+      }
+    }
+
+    // Small delay to ensure DOM is ready
+    const timeoutId = setTimeout(() => {
+      requestAnimationFrame(initGlobe)
+    }, 100)
 
     const onResize = () => {
-      if (canvasRef.current) {
-        width = canvasRef.current.offsetWidth
-      }
+      // Globe handles resize internally via onRender
     }
 
     window.addEventListener('resize', onResize)
-    onResize()
-
-    const globe = createGlobe(canvasRef.current, {
-      devicePixelRatio,
-      width: width * devicePixelRatio,
-      height: width * devicePixelRatio,
-      phi,
-      theta: 0.3,
-      // dark: isDarkMode ? 0 : 1,
-      dark: 0,
-      diffuse: 3,
-      mapSamples: 16_000,
-      mapBrightness: 1.2,
-      baseColor: [1, 1, 1],
-      markerColor: [251 / 255, 100 / 255, 21 / 255],
-      // glowColor: isDarkMode ? [1.2, 1.2, 1.2] : [0.2, 0.2, 0.2],
-      glowColor: [1, 1, 1],
-      markers: [{ location: [16.0545, 108.0717], size: 0.1 }],
-      onRender: (state) => {
-        // This prevents rotation while dragging
-        // if (!pointerInteracting.current) {
-        //   // Called on every animation frame.
-        //   // `state` will be an empty object, return updated params.
-        //   phi += 0.005
-        // }
-
-        state.phi = phi + r.get()
-        state.width = width * devicePixelRatio
-        state.height = width * devicePixelRatio
-        // console.log(state.phi)
-      }
-    })
-
-    setTimeout(() => {
-      if (canvasRef.current) {
-        canvasRef.current.style.opacity = '1'
-      }
-    })
 
     return () => {
-      globe.destroy()
+      clearTimeout(timeoutId)
+      if (globeRef.current) {
+        globeRef.current.destroy()
+        globeRef.current = null
+      }
       window.removeEventListener('resize', onResize)
     }
-  }, [canvasRef, r, isDarkMode])
+  }, [isMounted, r, isDarkMode])
 
   return (
     <canvas
